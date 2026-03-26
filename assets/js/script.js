@@ -209,13 +209,13 @@ window.addEventListener("scroll", () => {
         header.classList.remove('bg-white/80', 'header_sticked')
     }
     if (currentScroll <= 0) {
-        gsap.to(header, { marginTop: 0, duration: 0.3 });
+        gsap.to(header, { y: 0, duration: 0.3 });
     }
     else if (currentScroll > lastScroll) {
-        gsap.to(header, { marginTop: -105, duration: 0.3 });
+        gsap.to(header, { y: -105, duration: 0.3 });
     }
     else {
-        gsap.to(header, { marginTop: 0, duration: 0.3 });
+        gsap.to(header, { y: 0, duration: 0.3 });
     }
 
     lastScroll = currentScroll;
