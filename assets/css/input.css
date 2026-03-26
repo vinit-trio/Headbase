@@ -148,7 +148,7 @@
     }
 
     .cursor {
-        @apply w-fit z-999 absolute
+        @apply w-fit z-999 absolute select-none pointer-events-none
     }
 }
 
@@ -166,8 +166,8 @@
         @apply cursor-pointer
     }
 
-    #hero {
-        cursor: url('../images/cursor.svg'), default;
+    #hero * {
+        cursor: url('../images/cursor.svg'), default !important;
     }
 
     .simulated-cursor::after {
@@ -203,6 +203,10 @@
 
     .overlay.active {
         transform: translateX(0);
+    }
+
+    .header_sticked .header_bg{
+        @apply backdrop-blur-lg
     }
 }
 

@@ -74,6 +74,10 @@ loadertl.from('[second_sec]', {
     opacity: 0
 });
 
+loadertl.to('.own_cursor', {
+    opacity: 1
+});
+
 // ------------------------------------------------
 // Custom cursor effect
 // ------------------------------------------------
