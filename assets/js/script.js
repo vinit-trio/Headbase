@@ -47,6 +47,7 @@ loadertl.to('[loader] svg', {
 
 loadertl.to('[loader]', {
     opacity: 0,
+    display: 'none',
     onComplete: () => {
         lenis.start();
     }
@@ -219,6 +220,7 @@ window.addEventListener("scroll", () => {
 
     lastScroll = currentScroll;
 });
+
 // ------------------------------------------------
 // Back to top
 // ------------------------------------------------
