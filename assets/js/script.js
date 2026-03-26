@@ -41,11 +41,12 @@ loaderPaths.forEach((path) => {
     }, "<");
 });
 
-loadertl.to('[loader]', {
-    y: '-100%',
+loadertl.to('[loader] svg', {
     opacity: 0,
-    duration: .5,
-    ease: "power2.out",
+});
+
+loadertl.to('[loader]', {
+    opacity: 0,
     onComplete: () => {
         lenis.start();
     }
@@ -65,6 +66,10 @@ loadertl.from('[haroEle]', {
 });
 
 loadertl.from('#cursor-container', {
+    opacity: 0
+});
+
+loadertl.from('[second_sec]', {
     opacity: 0
 });
 
@@ -197,19 +202,19 @@ window.addEventListener("scroll", () => {
     let currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
-        header.classList.add('bg-white/80', 'backdrop-blur-sm')
+        header.classList.add('bg-white/80', 'header_sticked')
     }
     if (currentScroll < 100) {
-        header.classList.remove('bg-white/80', 'backdrop-blur-sm')
+        header.classList.remove('bg-white/80', 'header_sticked')
     }
     if (currentScroll <= 0) {
-        gsap.to(header, { y: 0, duration: 0.3 });
+        gsap.to(header, { marginTop: 0, duration: 0.3 });
     }
     else if (currentScroll > lastScroll) {
-        gsap.to(header, { y: -105, duration: 0.3 });
+        gsap.to(header, { marginTop: -105, duration: 0.3 });
     }
     else {
-        gsap.to(header, { y: 0, duration: 0.3 });
+        gsap.to(header, { marginTop: 0, duration: 0.3 });
     }
 
     lastScroll = currentScroll;
