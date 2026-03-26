@@ -1,0 +1,469 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url('../fonts/Inter-Italic-Variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@theme {
+    --spacing: 1px;
+    --spacing-spc: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
+
+    --container-*: initial;
+    --container-padding: 16px;
+    --container-xsm: 450px;
+    --container-sm: 576px;
+    --container-md: 768px;
+    --container-lg: 992px;
+    --container-xl: 1200px;
+    --container-2xl: 1400px;
+    --container-3xl: 1712px;
+
+    --breakpoint-*: initial;
+    --breakpoint-xsm: 450px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    --breakpoint-3xl: 1712px;
+
+    --color-brand: #7070FF;
+    --color-black: #111111;
+    --color-dark: #4B4B4B;
+    --color-blue: #4848FF;
+    --color-gray: #1D1D1D;
+    --color-border: #D8D8D8;
+    --color-border-2: #989898;
+    --color-text: #000047;
+
+    --font-inter: "Inter", sans-serif;
+
+    --text-p: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+    --text-p--line-height: 1.4;
+    --text-p--letter-spacing: 0.02em;
+
+    --text-40: clamp(1.5625rem, 1.375rem + 0.9375vw, 2.5rem);
+    --text-40--line-height: 1.1;
+
+    --text-64: clamp(1.875rem, 1.45rem + 2.125vw, 4rem);
+    --text-64--line-height: 1.2;
+
+    --text-96: clamp(2.1875rem, 1.425rem + 3.8125vw, 6rem);
+    --text-96--line-height: 1.1;
+
+    --text-120: clamp(2.5rem, 1.5rem + 5vw, 7.5rem);
+    --text-120--line-height: 1.1;
+
+    --shadow-black: 4px 4px 0 0 #111;
+    --shadow-blue: 4px 4px 0 0 #4848FF;
+    --shadow-1: 0 0 13px -3px rgba(0, 0, 0, .1),
+        0 4px 6px -2px rgba(0, 0, 0, .05);
+    --shadow-2: 0 0 13px -3px rgba(255, 255, 255, .37);
+
+    --transition-slow: all 0.3s ease;
+
+    --gradient-1: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 1) 100%);
+
+    --clip-path-1: shape(from 82.65% 45.61%, curve to 80.05% 62.06% with 78.37% 53.58%, curve to 73.90% 73.44% with 81.74% 70.54%, curve to 59.23% 75.23% with 66.06% 76.34%, curve to 45.15% 78.61% with 52.39% 74.11%, curve to 26.82% 83.24% with 37.91% 83.11%, curve to 23.58% 69.79% with 15.72% 83.37%, curve to 16.13% 50.00% with 31.43% 56.22%, curve to 13.95% 39.47% with 0.83% 43.79%, curve to 30.72% 29.76% with 27.07% 35.16%, curve to 39.92% 14.28% with 34.37% 24.36%, curve to 52.97% 12.76% with 45.46% 4.20%, curve to 61.28% 29.78% with 60.47% 21.32%, curve to 74.51% 37.93% with 62.09% 38.23%, curve to 82.65% 45.61% with 86.93% 37.63%);
+}
+
+@layer components {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+    }
+
+    .btn {
+        @apply rounded-lg py-12 px-24 text-lg flex items-center gap-4 xl:gap-8
+    }
+
+    .btn_blue {
+        @apply text-white bg-brand transition-all hover:bg-blue
+    }
+
+    .btn_transparent {
+        @apply bg-transparent text-brand transition-all hover:text-blue
+    }
+
+    .title {
+        @apply mb-32 xl:mb-64 flex flex-col gap-12 xl:gap-24;
+    }
+
+    .title h2 {
+        @apply text-64 text-black font-medium;
+    }
+
+    .title i {
+        @apply text-blue font-semibold;
+    }
+
+    .title.white :is(i, h2) {
+        @apply text-white
+    }
+
+    .badge {
+        @apply text-xs 3xl:text-sm py-4 px-8 3xl:py-8 3xl:px-14 border rounded 3xl:rounded-lg
+    }
+
+    .badge.green {
+        @apply border-green-400 bg-green-50 text-green-700
+    }
+
+    .badge.purple {
+        @apply border-purple-400 bg-purple-50 text-purple-700
+    }
+
+    .badge.blue {
+        @apply border-blue-400 bg-blue-50 text-blue-700
+    }
+
+    .badge.yellow {
+        @apply border-yellow-400 bg-yellow-50 text-yellow-700
+    }
+
+    .badge.red {
+        @apply border-red-400 bg-red-50 text-red-700
+    }
+
+    .clip-1 {
+        clip-path: var(--clip-path-1);
+    }
+
+    .cursor-label {
+        @apply mx-25 rounded-md py-9 px-18 text-white transition-opacity z-20
+    }
+
+    .cursor {
+        @apply w-fit z-999 absolute
+    }
+}
+
+@layer base {
+
+    html {
+        @apply scroll-smooth
+    }
+
+    body {
+        @apply font-inter text-dark overflow-x-hidden text-p;
+    }
+
+    button {
+        @apply cursor-pointer
+    }
+
+    #hero {
+        cursor: url('../images/cursor.svg'), default;
+    }
+
+    .simulated-cursor::after {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        right: 100%;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/cursor.svg');
+        background-size: cover;
+        filter: brightness(0) saturate(100%) invert(46%) sepia(98%) saturate(2788%) hue-rotate(1deg) brightness(103%) contrast(106%);
+    }
+
+    .simulated-cursor.bg-blue-500:after {
+        filter: brightness(0) saturate(100%) invert(43%) sepia(99%) saturate(2869%) hue-rotate(203deg) brightness(100%) contrast(105%);
+    }
+
+    .simulated-cursor {
+        @apply hidden xl:block
+    }
+
+    @media (any-pointer: coarse) and (any-hover: none) {
+        .own_cursor {
+            display: none !important;
+        }
+    }
+
+    .overlay {
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .overlay.active {
+        transform: translateX(0);
+    }
+}
+
+.expertise_card,
+.team_card {
+    border-right: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.our_expertise {
+    anchor-name: --exCardAnchor;
+}
+
+.team_cards {
+    anchor-name: --teamCardAnchor;
+}
+
+.expertise_card:hover {
+    anchor-name: --exCardAnchor;
+}
+
+.team_card:hover {
+    anchor-name: --teamCardAnchor;
+}
+
+.expertise_wrap .card_effect,
+.team_wrap .card_effect {
+    opacity: 0;
+    transition: var(--transition-slow);
+}
+
+.expertise_wrap .card_effect {
+    position-anchor: --exCardAnchor;
+    inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+}
+
+.team_wrap .card_effect {
+    position-anchor: --teamCardAnchor;
+    inset: anchor(top) anchor(right) anchor(bottom) anchor(left);
+}
+
+.expertise_wrap:hover .card_effect,
+.team_wrap:hover .card_effect {
+    opacity: 1;
+}
+
+.link {
+    position: relative;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: calc(100% - 10px);
+    bottom: -6px;
+    width: 15px;
+    height: 2px;
+    opacity: 0;
+    background-color: var(--color-brand);
+    transition: var(--transition-slow);
+}
+
+.link:hover::after {
+    opacity: 1;
+    left: 0;
+}
+
+.wcu_card:nth-child(2),
+.wcu_card:nth-child(5) {
+    @apply lg:ml-50 2xl:ml-115
+}
+
+.wcu_card:nth-child(3),
+.wcu_card:nth-child(4) {
+    @apply lg:ml-115 2xl:ml-230
+}
+
+.ul_effect {
+    overflow: hidden;
+    position: relative;
+    display: block;
+    padding-bottom: 5px;
+}
+
+.ul_effect::before,
+.ul_effect::after {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-blue);
+    transition: linear .3s;
+}
+
+.ul_effect::before {
+    left: 200%;
+    background-color: var(--color-blue);
+}
+
+.ul_effect:hover::before {
+    left: 0%;
+}
+
+.ul_effect:hover::after {
+    width: 0%;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis:not(.lenis-autoToggle).lenis-stopped {
+    overflow: clip;
+}
+
+.lenis [data-lenis-prevent],
+.lenis [data-lenis-prevent-wheel],
+.lenis [data-lenis-prevent-touch],
+.lenis [data-lenis-prevent-vertical],
+.lenis [data-lenis-prevent-horizontal] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+.lenis.lenis-autoToggle {
+    transition-property: overflow;
+    transition-duration: 1ms;
+    transition-behavior: allow-discrete;
+}
+
+[title] {
+    overflow: hidden;
+}
+
+[slideUp] {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+[fadeIn] {
+    opacity: 0;
+}
+
+[scaleUp] {
+    opacity: 0;
+    scale: .9;
+}
+
+[slideLeft] {
+    opacity: 0;
+    position: relative;
+    right: -500px;
+}
+
+@media(min-width:1400px) {
+    .team_card:nth-child(3n) {
+        border-right: none;
+    }
+
+    .team_card:nth-last-child(-n + 3) {
+        border-bottom: none;
+    }
+}
+
+@media(min-width:768px) and (max-width:1399px) {
+    .team_card:nth-child(2n) {
+        border-right: none;
+    }
+
+    .team_card:nth-last-child(-n + 2) {
+        border-bottom: none;
+    }
+}
+
+@media(max-width:767px) {
+    .expertise_card:nth-child(2n) {
+        border-right: none;
+    }
+
+    .expertise_card:last-child {
+        border-bottom: none;
+    }
+
+    .team_card:last-child {
+        border-bottom: none;
+    }
+
+    .team_card {
+        border-right: none;
+    }
+}
+
+@media(min-width:768px) and (max-width:1199px) {
+    .expertise_card:nth-child(3n) {
+        border-right: none;
+    }
+
+    .expertise_card:nth-last-child(-n + 3) {
+        border-bottom: none;
+    }
+}
+
+@media (min-width:1200px) {
+    .process_card:nth-child(1) {
+        @apply ml-200 relative
+    }
+
+    .process_card:nth-child(2) {
+        @apply -ml-100 relative
+    }
+
+    .process_card:nth-child(3) {
+        @apply ml-400 relative
+    }
+
+    .process_card:nth-child(4) {
+        @apply -ml-50 relative
+    }
+
+    .process_card:nth-child(5) {
+        @apply -ml-590 relative
+    }
+
+    .process_card:nth-child(1)::after {
+        content: url('../images/shape1.svg');
+        position: absolute;
+        top: 60px;
+        right: -70px;
+    }
+
+    .process_card:nth-child(3)::after {
+        content: url('../images/shape2.svg');
+        position: absolute;
+        top: 20px;
+        left: -150px;
+    }
+
+    .process_card:nth-child(4)::after {
+        content: url('../images/shape3.svg');
+        position: absolute;
+        top: 30px;
+        left: -210px;
+    }
+
+    .expertise_card:nth-child(5n) {
+        border-right: none;
+    }
+
+    .expertise_card:nth-last-child(-n + 5) {
+        border-bottom: none;
+    }
+}
+
+@media (min-width:1400px) {
+    .process_card:nth-child(3)::after {
+        top: 30px;
+    }
+}

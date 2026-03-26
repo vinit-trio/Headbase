@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4848FF">
+    <meta name="description"
+        content="Headbase is an IT solution company that provides innovative technology services and solutions to businesses. We specialize in software development, cloud computing, cybersecurity, and IT consulting.">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <title>Headbase - IT solution company</title>
+
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div loader class="fixed inset-0 bg-white z-999999 grid place-items-center">
+        <svg width="290" height="247" viewBox="0 0 290 247" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path style="opacity: 0"
+                d="M101.837 4.7793C103.078 2.61937 105.413 1.36212 107.867 1.51172L107.913 1.51465H179.108C183.93 1.82823 186.771 7.13193 184.344 11.3574L184.341 11.3623L53.1826 241.863C50.8326 245.961 45.1449 246.256 42.3643 242.571L42.1045 242.202L2.58008 181.95C1.21985 179.873 1.13782 177.19 2.37207 175.029L2.37109 175.028L101.832 4.78906L101.837 4.7793Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M86.0379 167.773H147.526C152.574 167.773 155.734 173.334 153.119 177.733L114.625 242.312C113.434 244.295 111.314 245.501 109.03 245.501H47.5418C42.4937 245.501 39.3324 239.939 41.949 235.539L80.4461 170.957L80.4451 170.956C81.6258 168.979 83.744 167.774 86.0379 167.773Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M236.668 72.8145C239.102 68.5818 245.107 68.4031 247.786 72.4756L287.417 132.739C288.777 134.811 288.862 137.485 287.634 139.644L226.575 241.218L226.567 241.229L226.56 241.242C225.316 243.402 222.974 244.662 220.509 244.512L220.46 244.509H220.412L148.68 244.805C143.84 244.489 140.998 239.191 143.43 234.961L236.668 72.8145Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M180.282 69.5273H241.937C247.007 69.5273 250.168 75.0929 247.549 79.4883L208.949 144.085C207.765 146.063 205.64 147.271 203.336 147.271H141.681C136.61 147.271 133.449 141.705 136.07 137.31L136.069 137.309L174.669 72.7129C175.852 70.736 177.986 69.5275 180.282 69.5273Z"
+                stroke="#4848FF" stroke-width="2" />
+        </svg>
+    </div>
+    <!-- Multi cursor -->
+    <div id="cursor-container" class="absolute inset-0 w-screen h-screen z-9 hidden xl:block"></div>
+    <!-- Cursor -->
+    <div class="own_cursor hidden xl:block bg-green-500 fixed m-25 rounded-md py-9 px-18 text-white transition-opacity z-20 opacity-0"
+        id="myCursor">
+        You
+    </div>
+    <!-- Header -->
+    <header id="header" class="py-20 sm:py-34 text-text sticky top-0 z-99999">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Headbase">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex gap-40 capitalize">
+                        <li>
+                            <a class="link" href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="link" href="work.html">Work</a>
+                        </li>
+                        <li>
+                            <a class="link" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="link" href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="link" href="career.html">Career</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="34" height="34" x="0" y="0" viewBox="0 0 20 20" style="enable-background:new 0 0 512 512"
+                        xml:space="preserve" class="">
+                        <g>
+                            <path fill="#111" fill-rule="evenodd"
+                                d="M9 15a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1zM3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
+                                clip-rule="evenodd" opacity="1" data-original="#111"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="offcanvas fixed bg-white top-0 bottom-0 right-0 w-full max-w-320 translate-x-full z-50 text-black invisible"
+            id="menu">
+            <button id="close-menu" class="absolute top-20 right-30 font-black">✕</button>
+            <ul class="flex flex-col gap-10 p-30">
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="work.html">Work</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="career.html">Career</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay fixed top-0 bottom-0 right-0 w-full bg-brand/15 backdrop-blur-xs z-40 duration-500"
+            id="overlay"></div>
+    </header>
+    <!-- Hero bg -->
+    <div heroBg class="absolute -z-2 w-full top-0 left-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1719" height="718" viewBox="0 0 1719 718" fill="none"
+            class="mx-auto max-w-full">
+            <circle cx="859.5" cy="-141.5" r="799.5" stroke="#7070FF" stroke-opacity="0.2" stroke-width="120" />
+        </svg>
+    </div>
+    <div class="fixed inset-0 -z-1 backdrop-blur-3xl"></div>
+    <main>
+        <!-- Hero section -->
+        <section id="hero" class="hero text-center py-spc flex items-center">
+            <div class="container relative flex flex-col gap-20 xl:gap-40">
+                <h1 haroEle class="max-w-1045 mx-auto text-120 font-bold text-black">
+                    We Design & Build <i class="text-blue font-semibold">High-Performance</i> Digital Products
+                </h1>
+                <p haroEle class="max-w-816 mx-auto text-black">
+                    Transforming ideas into powerful digital experiences. We craft innovative solutions that drive
+                    business growth and redefine user engagement.
+                </p>
+                <div haroEle class="flex flex-wrap justify-center gap-8 xl:gap-16">
+                    <a href="#" class="btn btn_blue">
+                        <span>Explore our services</span>
+                        <img src="assets/images/arrow-right-icon.svg" alt="">
+                    </a>
+                    <a href="#" class="btn btn_transparent">
+                        <span>Book a Free Consulation</span>
+                        <img src="assets/images/call-icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Our Impact section -->
+        <section class="py-spc text-center">
+            <div class="container">
+                <div class="title" title>
+                    <h2 slideUp>
+                        Our <i>Impact</i>
+                    </h2>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-30">
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="250">0</span>+
+                        </span>
+                        <p>Projects Delivered</p>
+                    </div>
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="7">0</span>+
+                        </span>
+                        <p>Years of Excellence</p>
+                    </div>
+                    <div>
+                        <span class="text-96 font-bold text-blue pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="98">0</span>%
+                        </span>
+                        <p>Client satisfaction</p>
+                    </div>
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="120">0</span>+
+                        </span>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- What We Do section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            What We Do <i>Best</i>
+                        </h2>
+                    </div>
+                    <p>
+                        End-to-end digital solutions tailored to your unique business needs.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-16 3xl:gap-32">
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/wordpress.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Word Press - WooCommerce
+                            </h3>
+                            <p>
+                                Build powerful, secure, and scalable WordPress stores.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge blue">
+                                Wordpress Core
+                            </li>
+                            <li class="badge green">
+                                WooCommerce
+                            </li>
+                            <li class="badge yellow">
+                                Elementor
+                            </li>
+                        </ul>
+                    </div>
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/shopify.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Shopify Store
+                            </h3>
+                            <p>
+                                Seamless and scalable eCommerce experiences on Shopify.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge purple">
+                                Shopify Core
+                            </li>
+                            <li class="badge blue">
+                                Liquid
+                            </li>
+                            <li class="badge green">
+                                Storefront API
+                            </li>
+                        </ul>
+                    </div>
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/web-design.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Web Design
+                            </h3>
+                            <p>
+                                We design modern, clean, responsive, and brand-focused websites.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge blue">
+                                Figma UI
+                            </li>
+                            <li class="badge green">
+                                Tailwind CSS
+                            </li>
+                            <li class="badge yellow">
+                                Responsive Grid
+                            </li>
+                        </ul>
+                    </div>
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                UI/UX Design
+                            </h3>
+                            <p>
+                                We design simple, usable, user-first approach, and accessible interfaces.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge red">
+                                Figma
+                            </li>
+                            <li class="badge yellow">
+                                FigJam
+                            </li>
+                            <li class="badge green">
+                                Prototyping
+                            </li>
+                        </ul>
+                    </div>
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/web-dev.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Web Development
+                            </h3>
+                            <p>
+                                Secure, scalable, and robust websites built with modern technology.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge green">
+                                Next.js
+                            </li>
+                            <li class="badge purple">
+                                React.js
+                            </li>
+                            <li class="badge blue">
+                                HTML5
+                            </li>
+                            <li class="badge yellow">
+                                CSS3
+                            </li>
+                            <li class="badge red">
+                                Payload
+                            </li>
+                        </ul>
+                    </div>
+                    <div card
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/app-design.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                App Design
+                            </h3>
+                            <p>
+                                Beautiful, functional mobile experiences users love to use.
+                            </p>
+                        </div>
+                        <ul class="flex gap-8 3xl:gap-16 flex-wrap mt-auto">
+                            <li class="badge red">
+                                Figma
+                            </li>
+                            <li class="badge purple">
+                                Prototyping
+                            </li>
+                            <li class="badge green">
+                                ISO/Android
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- How We Do section -->
+        <section class="py-spc overflow-x-hidden">
+            <div class="container relative">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            How We Create <i>Value</i>
+                        </h2>
+                    </div>
+                    <p>
+                        A structured approach that turns complex problems into clear, scalable solutions.
+                    </p>
+                </div>
+                <div
+                    class="our_process grid lg:grid-cols-2 xl:grid-cols-1 gap-32 xl:gap-88 xl:place-items-center pt-50">
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/brain-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Understand the Problem
+                            </h3>
+                            <p>
+                                We study the business, users, and constraints to identify the real problem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/idea-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Define the Direction
+                            </h3>
+                            <p>
+                                We align goals, priorities, and scope to set a clear product direction.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Design the Experience
+                            </h3>
+                            <p>
+                                We design usable, scalable experiences aligned with strategy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/qa-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Build and Quality Assurance (QA)
+                            </h3>
+                            <p>
+                                We build reliable software and check its quality.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Ship and Grow
+                            </h3>
+                            <p>
+                                Launch, learn, and continuously improve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute clip-1 bg-brand/5 size-[30vw] inset-0 m-auto -z-2"></div>
+                <div class="absolute inset-0 blur-3xl -z-1"></div>
+            </div>
+        </section>
+        <!-- Technologies & Expertise section -->
+        <section class="py-spc text-center">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Technologies & <i>Expertise</i>
+                        </h2>
+                    </div>
+                    <p>
+                        We leverage the latest technologies to build scalable, performant, and future-proof digital
+                        solutions.
+                    </p>
+                </div>
+                <div class="expertise_wrap">
+                    <div class="our_expertise grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5">
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/next-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Next.js
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/react-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                React.js
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/shopify.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Shopify
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/kirby.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Kirby
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                UI/UX Design
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/wordpress.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                WordPress
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/tw-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Tailwind CSS
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/responsive-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Web/App Design
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/pl-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Payload
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/php-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                PHP
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/html-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                HTML5
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/ts-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                TypeScript
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/js-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                JavaScript
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/node.js.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Node.js
+                            </h3>
+                        </div>
+                        <div fadeIn
+                            class="expertise_card p-25 sm:p-32 3xl:p-64 flex flex-col gap-14 xl:gap-28 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                                <img class="w-32 sm:w-40" src="assets/images/mongo-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                MongoDB
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="card_effect absolute bg-brand/10 -z-1"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Industries section -->
+        <section class="py-spc bg-black text-white">
+            <div class="container">
+                <div class="title white">
+                    <div title>
+                        <h2 slideUp>
+                            <i>Industries</i>
+                        </h2>
+                    </div>
+                    <p class="opacity-80">
+                        We leverage the latest technologies to build scalable, performant, and future-proof digital
+                        solutions.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="container 3xl:max-w-full 3xl:p-0 mask-[linear-gradient(90deg,#000_80%,transparent_100%)] 3xl:mask-none">
+                <div class="swiper industriesSwiper 3xl:pl-[calc((100%-1680px)/2)]!">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/fintech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        FinTech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building secure, compliant, and high-conversion financial products. From
+                                        dashboards to customer-facing platforms, we design experiences that build trust
+                                        and perform at scale.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/edtech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        EdTech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Designing learning platforms that prioritize clarity, engagement, and
+                                        accessibility. Across web, mobile, and LMS products, we create UX that supports
+                                        learning—not distraction.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/healthcare.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Healthcare
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building patient-friendly, compliant digital experiences. From healthtech SaaS
+                                        to wellness apps, we balance usability, accessibility, and regulatory
+                                        requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/e-commerce.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        E-commerce
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Creating seamless shopping experiences for DTC brands and enterprise platforms.
+                                        Our work supports discovery, conversion, retention, and end-to-end user
+                                        journeys.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/real-estate.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Real Estate
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Designing digital platforms that connect people and properties. From listing
+                                        platforms to internal tools, we build intuitive, scalable real estate
+                                        experiences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/mi-tech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Manufacturing & Industrial Tech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building digital tools for operations, analytics, and internal systems. We focus
+                                        on clarity, efficiency, and usability in complex industrial environments.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Work That Delivers Results section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Work That <i>Delivers Results</i>
+                        </h2>
+                    </div>
+                    <p>
+                        Real client challenges, clear solutions, and the impact created through design and technology.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-40 xl:gap-y-80">
+                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                        <a href="#" class="absolute inset-0 z-1"></a>
+                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
+                            <img src="assets/images/project1.webp" alt=""
+                                class="absolute size-full inset-0 object-cover">
+                            <div
+                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-1000 bg-white/30 group-hover:left-full!">
+                            </div>
+                        </div>
+                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                            <div class="badge green">
+                                Website Design
+                            </div>
+                            <div class="badge blue">
+                                E-Commerce
+                            </div>
+                            <div class="badge yellow">
+                                Skincare
+                            </div>
+                        </div>
+                        <h3 class="text-xl xl:text-2xl text-black">
+                            Ellitee SkinCare
+                        </h3>
+                        <p>
+                            A science-led skincare website focused on trust, education, and elegant product
+                            storytelling.
+                        </p>
+                    </div>
+                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                        <a href="#" class="absolute inset-0 z-1"></a>
+                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
+                            <img src="assets/images/project2.webp" alt=""
+                                class="absolute size-full inset-0 object-cover">
+                            <div
+                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-1000 bg-white/30 group-hover:left-full!">
+                            </div>
+                        </div>
+                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                            <div class="badge purple">
+                                Fashion
+                            </div>
+                            <div class="badge green">
+                                Web Development
+                            </div>
+                            <div class="badge blue">
+                                E-Commerce
+                            </div>
+                        </div>
+                        <h3 class="text-xl xl:text-2xl text-black">
+                            Underpinnings Lingerie
+                        </h3>
+                        <p>
+                            An inclusive, body-positive eCommerce platform designed for confidence and perfect fit
+                            discovery.
+                        </p>
+                    </div>
+                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                        <a href="#" class="absolute inset-0 z-1"></a>
+                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
+                            <img src="assets/images/project3.webp" alt=""
+                                class="absolute size-full inset-0 object-cover">
+                            <div
+                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-1000 bg-white/30 group-hover:left-full!">
+                            </div>
+                        </div>
+                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                            <div class="badge blue">
+                                Liquor
+                            </div>
+                            <div class="badge yellow">
+                                Shopify Store
+                            </div>
+                            <div class="badge red">
+                                Luxury E-Commerce
+                            </div>
+                        </div>
+                        <h3 class="text-xl xl:text-2xl text-black">
+                            Snowo Distillers
+                        </h3>
+                        <p>
+                            A luxury Shopify store crafted to showcase heritage, awards, and premium brand identity.
+                        </p>
+                    </div>
+                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                        <a href="#" class="absolute inset-0 z-1"></a>
+                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
+                            <img src="assets/images/project4.webp" alt=""
+                                class="absolute size-full inset-0 object-cover">
+                            <div
+                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-1000 bg-white/30 group-hover:left-full!">
+                            </div>
+                        </div>
+                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                            <div class="badge green">
+                                Street Art
+                            </div>
+                            <div class="badge blue">
+                                E-Commerce
+                            </div>
+                            <div class="badge yellow">
+                                Web Development
+                            </div>
+                        </div>
+                        <h3 class="text-xl xl:text-2xl text-black">
+                            Frank Art Color
+                        </h3>
+                        <p>
+                            A bold, immersive portfolio website for showcasing street art and creative services.
+                        </p>
+                    </div>
+                </div>
+                <button class="btn btn_blue mx-auto mt-40 xl:mt-80">
+                    <span>View More Projects</span>
+                    <img src="assets/images/arrow-right-icon.svg" alt="">
+                </button>
+            </div>
+        </section>
+        <!-- Who We Work With section -->
+        <section class="py-spc text-center">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Who We <i>Work With</i>
+                        </h2>
+                    </div>
+                    <p>
+                        Teams and organizations we partner with to design, build, and scale digital products.
+                    </p>
+                </div>
+                <div class="team_wrap">
+                    <div class="team_cards grid md:grid-cols-2 2xl:grid-cols-3">
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/founder.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Founders & Leadership Teams
+                            </h3>
+                            <p>
+                                Building and scaling products while balancing speed, risk, and long-term vision.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/team.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Product & Engineering Teams
+                            </h3>
+                            <p>
+                                Design and development partners for complex systems, workflows, and platforms.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Startups & Growing Businesses
+                            </h3>
+                            <p>
+                                Turning early ideas into scalable products that support rapid growth.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/organizations.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Enterprises & Large Organizations
+                            </h3>
+                            <p>
+                                Modernizing systems and building reliable internal and customer-facing tools.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/secure.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Regulated & Complex Industries
+                            </h3>
+                            <p>
+                                Delivering compliant, secure solutions in highly regulated environments.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/earth.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Global & Distributed Clients
+                            </h3>
+                            <p>
+                                Supporting teams across regions with reliable collaboration and delivery.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card_effect absolute bg-brand/10 -z-1"></div>
+                </div>
+            </div>
+        </section>
+        <!-- Our mission section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title max-w-1550">
+                    <div title>
+                        <h2 slideUp>
+                            Whether you’re a startup, an <i>Established business</i>, or <i>an Enterprise</i>, we’re
+                            here to help you reach new heights online.
+                        </h2>
+                    </div>
+                </div>
+                <div class="grid xl:grid-cols-2 gap-32 2xl:gap-64 items-center">
+                    <div class="relative rounded-xl overflow-hidden aspect-video xl:aspect-[1.3/1] group">
+                        <img src="assets/images/team.webp" alt="" class="size-full object-cover">
+                        <div
+                            class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-1000 bg-white/30 group-hover:left-full!">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-32 2xl:gap-64">
+                        <div class="grid md:grid-cols-2 xl:grid-cols-1 gap-32">
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <div title>
+                                    <h3 class="text-40 font-semibold text-black" slideUp>
+                                        Our Mission
+                                    </h3>
+                                </div>
+                                <p>
+                                    To empower businesses with cutting-edge web solutions that enhance their digital
+                                    presence and drive growth.
+                                </p>
+                            </div>
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <div title>
+                                    <h3 class="text-40 font-semibold text-black" slideUp>
+                                        Our Approach
+                                    </h3>
+                                </div>
+                                <p>
+                                    That’s why we take a collaborative approach, working closely with our clients to
+                                    deliver tailored solutions that align with their goals.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-32">
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <span class="text-96 font-bold text-black"><span class="counter"
+                                        data-target="164">0</span>+</span>
+                                <p>Successful Projects Delivered</p>
+                            </div>
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <span class="text-96 font-bold text-blue"><span class="counter"
+                                        data-target="98">0</span>%</span>
+                                <p>Client Satisfaction Rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Why Choose Us section -->
+        <section class="py-spc pl-16 sm:pl-32 bg-black text-white overflow-x-hidden">
+            <div class="pr-0 pl-[calc((100%-1680px)/2)] flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/3 xl:w-2/5 pr-16">
+                    <div class="title white">
+                        <div title>
+                            <h2 slideUp>
+                                Why <i>Choose Us</i>
+                            </h2>
+                        </div>
+                        <p class="opacity-80 max-w-620">
+                            We combine technical expertise with creative thinking to deliver solutions that drive real
+                            business results.
+                        </p>
+                    </div>
+                    <div class="not-lg:hidden">
+                        <svg class="abstract_svg" width="444" height="377" viewBox="0 0 444 377" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M154.152 6.42188C156.374 2.5694 160.562 0.31568 164.976 0.583984L164.992 0.584961H273.827C282.516 1.11706 287.608 10.6129 283.261 18.1523L283.26 18.1543L82.7881 369.189C78.4394 376.745 67.697 377.067 62.9072 369.794L2.49609 278.035C0.0609851 274.331 -0.0860441 269.552 2.12207 265.699L2.12109 265.698L154.15 6.4248L154.152 6.42188Z"
+                                stroke="#D8D8D8" stroke-width="1.125" />
+                            <path
+                                d="M131.505 253.781H225.487C234.426 253.781 240.016 263.416 235.733 271.184L235.521 271.552L176.682 369.905C174.553 373.437 170.753 375.597 166.647 375.597H72.6642C63.583 375.596 57.9578 365.653 62.6291 357.825L62.6301 357.826L121.469 259.471L121.47 259.472C123.584 255.942 127.384 253.781 131.505 253.781Z"
+                                stroke="#D8D8D8" stroke-width="1.125" />
+                            <path
+                                d="M360.235 110.034C364.596 102.476 375.37 102.154 380.174 109.43L440.748 201.207C443.188 204.909 443.338 209.684 441.13 213.535L347.791 368.24L347.785 368.249C345.558 372.102 341.358 374.357 336.931 374.089L336.913 374.087L336.895 374.088L227.185 374.538C218.47 374.005 213.367 364.521 217.726 356.968L360.235 110.034Z"
+                                stroke="#D8D8D8" stroke-width="1.125" />
+                            <path
+                                d="M275.551 104.164H369.789C378.898 104.164 384.534 114.11 379.851 121.938L320.852 220.313C318.732 223.844 314.922 226.005 310.789 226.005H216.552C207.443 226.005 201.806 216.059 206.489 208.231L265.488 109.855C267.608 106.325 271.432 104.164 275.551 104.164Z"
+                                stroke="#D8D8D8" stroke-width="1.125" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="wcu_cards w-full lg:w-2/3 xl:w-3/5 flex flex-col gap-16 xl:gap-32">
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/users.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                Client-First Approach
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                We align closely with your goals to deliver solutions that truly support your business
+                                growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/clock.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                On-Time Delivery
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                Structured workflows and agile processes ensure every project is delivered as promised.
+                            </p>
+                        </div>
+                    </div>
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                Scalable Solutions
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                Every release is tested and reviewed to meet strict performance standards.
+                            </p>
+                        </div>
+                    </div>
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/message.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                Transparent Communication
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                You receive clear updates and full visibility throughout every project stage.
+                            </p>
+                        </div>
+                    </div>
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/success.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                Quality Assurance
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                Every release is tested and reviewed to meet strict performance standards.
+                            </p>
+                        </div>
+                    </div>
+                    <div slideLeft
+                        class="wcu_card flex items-center gap-24 bg-gray rounded-l-full py-16 2xl:py-32 px-32 2xl:px-64 border border-gray hover:border-border-2 transition-colors">
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-2 bg-black">
+                            <img class="w-32 sm:w-40" src="assets/images/headphone.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 2xl:gap-16">
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium">
+                                Ongoing Support
+                            </h3>
+                            <p class="opacity-80 max-w-535 text-sm sm:text-base 2xl:text-lg 3xl:text-xl">
+                                We provide continuous maintenance, updates, and long-term technical support.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CTA section -->
+        <section class="py-spc text-center">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Ready to <i>Grow Your Business</i> Digitally?
+                        </h2>
+                    </div>
+                    <p>
+                        Let's discuss how we can help you achieve your digital goals. Our team is excited to hear from
+                        you.
+                    </p>
+                </div>
+                <a href="#" class="btn btn_blue w-fit mx-auto">
+                    <span>Schedule a Free Strategy Call</span>
+                    <img src="assets/images/call-icon.svg" alt="" class="brightness-0 invert">
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="relative py-spc border-t border-black/10 overflow-hidden">
+        <div class="container">
+            <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-32 gap-y-40 sm:gap-y-80">
+                <div>
+                    <div class="mb-32 xl:mb-64">
+                        <img src="assets/images/logo.svg" alt="HeadBase" class="w-275">
+                    </div>
+                    <div title>
+                        <h2 slideUp class="text-40 font-medium text-black">
+                            The agency <br>
+                            for <i class="font-semibold text-blue">impatient</i> <br>
+                            brands
+                        </h2>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Quick links
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Services</a></li>
+                        <li><a class="link hover:text-black" href="#">Work</a></li>
+                        <li><a class="link hover:text-black" href="#">About</a></li>
+                        <li><a class="link hover:text-black" href="#">Contact</a></li>
+                        <li><a class="link hover:text-black" href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Services
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Wordpress</a></li>
+                        <li><a class="link hover:text-black" href="#">Shopify Store</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Design</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Development</a></li>
+                        <li><a class="link hover:text-black" href="#">UI/UX Design</a></li>
+                        <li><a class="link hover:text-black" href="#">App Design</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-74">
+                    <p slideUp>
+                        SH-403 Shiven Shoppers, Adajan DN,
+                        Surat – 395009, Gujarat, India
+                    </p>
+                    <ul slideUp class="flex gap-8 xl:gap-16">
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/Instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/LinkedIn.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <a slideUp href="mailto:hr@headbase.com" class="text-blue ul_effect w-fit">hr@headbase.com</a>
+                    <p slideUp>&copy; <span id="currentYear">2026</span>-Headbase. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute clip-1 bg-brand/10 size-[30vw] -bottom-100 left-0 -z-2"></div>
+        <div class="absolute inset-0 blur-3xl -z-1"></div>
+    </footer>
+    <!-- Back to top -->
+    <button id="backToTop" class="fixed bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all 
+    duration-500 hover:text-blue hover:bottom-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 12 7-7 7 7" />
+            <path d="M12 19V5" />
+        </svg>
+    </button>
+    <!-- Scripts -->
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
