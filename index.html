@@ -22,7 +22,7 @@
 
 <body>
     <!-- Loader -->
-    <div loader class="fixed inset-0 bg-white z-999999 grid place-items-center p-100">
+    <!-- <div loader class="fixed inset-0 bg-white z-999999 grid place-items-center p-100">
         <svg class="max-w-full" width="290" height="247" viewBox="0 0 290 247" fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path style="opacity: 0"
@@ -38,13 +38,19 @@
                 d="M180.282 69.5273H241.937C247.007 69.5273 250.168 75.0929 247.549 79.4883L208.949 144.085C207.765 146.063 205.64 147.271 203.336 147.271H141.681C136.61 147.271 133.449 141.705 136.07 137.31L136.069 137.309L174.669 72.7129C175.852 70.736 177.986 69.5275 180.282 69.5273Z"
                 stroke="#4848FF" stroke-width="2" />
         </svg>
-    </div>
+    </div> -->
     <!-- Multi cursor -->
     <div id="cursor-container" class="hidden xl:block"></div>
     <!-- Cursor -->
-    <div class="own_cursor hidden xl:block bg-green-500 fixed m-25 rounded-md py-9 px-18 text-white transition-opacity z-9999 opacity-0"
-        id="myCursor">
-        You
+    <div class="own_cursor hidden xl:block transition-opacity z-9999 opacity-0 fixed select-none pointer-events-none" id="myCursor">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M21.1868 12.8532L16.8428 14.3189C15.6435 14.7187 14.6841 15.6515 14.2844 16.8774L12.8186 21.2214C11.566 24.9791 6.28925 24.8991 5.11664 21.1414L0.186332 5.28449C-0.77308 2.13975 2.1318 -0.791784 5.24989 0.194278L21.1335 5.12459C24.8645 6.2972 24.9178 11.6006 21.1868 12.8532Z"
+                fill="#00C951" />
+        </svg>
+        <div class="bg-green-500 mx-25 rounded-md py-9 px-18 text-white">
+            You
+        </div>
     </div>
     <!-- Header -->
     <header id="header" class="py-20 sm:py-34 text-text sticky top-0 z-99999">
@@ -191,7 +197,7 @@
                     </p>
                 </div>
                 <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-16 3xl:gap-32">
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/wordpress.svg" alt="">
@@ -216,7 +222,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/shopify.svg" alt="">
@@ -241,7 +247,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/web-design.svg" alt="">
@@ -266,7 +272,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
@@ -291,7 +297,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/web-dev.svg" alt="">
@@ -322,7 +328,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div card
+                    <div slideUp
                         class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
                         <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
                             <img class="w-32 sm:w-40" src="assets/images/app-design.svg" alt="">
@@ -763,7 +769,7 @@
                 <div class="grid md:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-40 xl:gap-y-80">
                     <div class="group relative flex flex-col gap-8 3xl:gap-16">
                         <a href="#" class="absolute inset-0 z-1"></a>
-                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
+                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
                             <img src="assets/images/project1.webp" alt=""
                                 class="absolute size-full inset-0 object-cover">
                             <div
@@ -1247,7 +1253,7 @@
         <div class="absolute inset-0 blur-3xl -z-1"></div>
     </footer>
     <!-- Back to top -->
-    <button id="backToTop" class="fixed bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all 
+    <button id="backToTop" class="fixed opacity-0 bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all 
     duration-500 hover:text-blue hover:bottom-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">

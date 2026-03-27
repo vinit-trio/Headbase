@@ -166,8 +166,8 @@
         @apply cursor-pointer
     }
 
-    #hero * {
-        cursor: url('../images/cursor.svg'), default !important;
+    #hero, #hero * {
+        cursor: none;
     }
 
     .simulated-cursor::after {

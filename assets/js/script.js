@@ -13,70 +13,70 @@ const lenis = new Lenis({
 });
 
 lenis.scrollTo(0, { immediate: true });
-lenis.stop();
+// lenis.stop();
 
 
 // ------------------------------------------------
 // Loader animation
 // ------------------------------------------------
 
-const loaderPaths = gsap.utils.toArray("[loader] path");
+// const loaderPaths = gsap.utils.toArray("[loader] path");
 
-const loadertl = gsap.timeline({
-    defaults: { ease: "power4.out" }
-});
+// const loadertl = gsap.timeline({
+//     defaults: { ease: "power4.out" }
+// });
 
-loaderPaths.forEach((path) => {
-    const length = path.getTotalLength();
+// loaderPaths.forEach((path) => {
+//     const length = path.getTotalLength();
 
-    gsap.set(path, {
-        strokeDasharray: length,
-        strokeDashoffset: length
-    });
+//     gsap.set(path, {
+//         strokeDasharray: length,
+//         strokeDashoffset: length
+//     });
 
-    loadertl.to(path, {
-        opacity: 1,
-        strokeDashoffset: 0,
-        duration: 1.5
-    }, "<");
-});
+//     loadertl.to(path, {
+//         opacity: 1,
+//         strokeDashoffset: 0,
+//         duration: 1.5
+//     }, "<");
+// });
 
-loadertl.to('[loader] svg', {
-    opacity: 0,
-});
+// loadertl.to('[loader] svg', {
+//     opacity: 0,
+// });
 
-loadertl.to('[loader]', {
-    opacity: 0,
-    display: 'none',
-    onComplete: () => {
-        lenis.start();
-    }
-});
+// loadertl.to('[loader]', {
+//     opacity: 0,
+//     display: 'none',
+//     onComplete: () => {
+//         lenis.start();
+//     }
+// });
 
-loadertl.from('[heroBg]', {
-    opacity: 0,
-    y: -150,
-    ease: "power2.out",
-});
+// loadertl.from('[heroBg]', {
+//     opacity: 0,
+//     y: -150,
+//     ease: "power2.out",
+// });
 
-loadertl.from('[haroEle]', {
-    opacity: 0,
-    y: 150,
-    stagger: .2,
-    ease: "power2.out",
-});
+// loadertl.from('[haroEle]', {
+//     opacity: 0,
+//     y: 150,
+//     stagger: .2,
+//     ease: "power2.out",
+// });
 
-loadertl.from('#cursor-container', {
-    opacity: 0
-});
+// loadertl.from('#cursor-container', {
+//     opacity: 0
+// });
 
-loadertl.from('[second_sec]', {
-    opacity: 0
-});
+// loadertl.from('[second_sec]', {
+//     opacity: 0
+// });
 
-loadertl.to('.own_cursor', {
-    opacity: 1
-});
+// loadertl.to('.own_cursor', {
+//     opacity: 1
+// });
 
 // ------------------------------------------------
 // Custom cursor effect
@@ -408,15 +408,12 @@ paths.forEach((path) => {
             trigger: ".abstract_svg",
             start: "top 60%",
             end: "top 30%",
-            scrub: 2,
+            toggleActions: "play none none none",
         }
     });
 });
 
 
-// ------------------------------------------------
-// slideLeft animation
-// ------------------------------------------------
 gsap.utils.toArray("[slideLeft]").forEach((card) => {
     gsap.to(card, {
         opacity: 1,
@@ -426,7 +423,7 @@ gsap.utils.toArray("[slideLeft]").forEach((card) => {
             trigger: card,
             start: "top 80%",
             end: "top 30%",
-            scrub: true,
+            toggleActions: "play none none none", // key change
         }
     });
 });
