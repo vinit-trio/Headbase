@@ -44,6 +44,8 @@
     --color-dark: #4B4B4B;
     --color-blue: #4848FF;
     --color-gray: #1D1D1D;
+    --color-gray-500: #818181;
+    --color-gray-600: #666666;
     --color-border: #D8D8D8;
     --color-border-2: #989898;
     --color-text: #000047;
@@ -205,9 +207,48 @@
         transform: translateX(0);
     }
 
-    .header_sticked .header_bg{
+    .header_sticked .header_bg {
         @apply backdrop-blur-lg
     }
+
+    .accordion-item .icon {
+        @apply transition-all
+    }
+
+    .accordion-item.open .icon {
+        @apply rotate-180
+    }
+
+    .tab-panel {
+        @apply hidden
+    }
+
+    .tab-panel.active {
+        @apply block
+    }
+
+    .tab-buttons button {
+        @apply sm:p-8 font-medium
+    }
+
+    .tab-buttons button.active {
+        @apply text-blue
+    }
+
+    .sb-none::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+.list_star li::before{
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url('../images/star.svg');
+    margin-top: -2px;
+    margin-right: 12px;
 }
 
 .expertise_card,
@@ -269,6 +310,7 @@
     transition: var(--transition-slow);
 }
 
+.link.active::after,
 .link:hover::after {
     opacity: 1;
     left: 0;

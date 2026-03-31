@@ -20,11 +20,11 @@ lenis.scrollTo(0, { immediate: true });
 // Loader animation
 // ------------------------------------------------
 
-// const loaderPaths = gsap.utils.toArray("[loader] path");
+const loadertl = gsap.timeline({
+    defaults: { ease: "power4.out" }
+});
 
-// const loadertl = gsap.timeline({
-//     defaults: { ease: "power4.out" }
-// });
+// const loaderPaths = gsap.utils.toArray("[loader] path");
 
 // loaderPaths.forEach((path) => {
 //     const length = path.getTotalLength();
@@ -66,17 +66,25 @@ lenis.scrollTo(0, { immediate: true });
 //     ease: "power2.out",
 // });
 
-// loadertl.from('#cursor-container', {
-//     opacity: 0
-// });
+if (document.querySelector('#cursor-container')) {
 
-// loadertl.from('[second_sec]', {
-//     opacity: 0
-// });
+    loadertl.from('#cursor-container', {
+        opacity: 0
+    });
 
-// loadertl.to('.own_cursor', {
-//     opacity: 1
-// });
+}
+
+loadertl.from('[second_sec]', {
+    opacity: 0
+});
+
+if (document.querySelector('.own_cursor')) {
+
+    loadertl.to('.own_cursor', {
+        opacity: 1
+    });
+
+}
 
 // ------------------------------------------------
 // Custom cursor effect
@@ -88,24 +96,30 @@ const cursor = document.querySelector("#myCursor");
 
 let mouseX = 0, mouseY = 0;
 
-window.addEventListener("mousemove", (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+if (cursor) {
+    window.addEventListener("mousemove", (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
 
-    gsap.to(cursor, {
-        x: mouseX,
-        y: mouseY,
-        duration: 0
+        gsap.to(cursor, {
+            x: mouseX,
+            y: mouseY,
+            duration: 0
+        });
     });
-});
+}
 
-document.getElementById('hero').addEventListener("mouseleave", () => {
-    gsap.set([cursor], { opacity: 0 });
-});
+const hero = document.getElementById('hero');
 
-document.getElementById('hero').addEventListener("mouseenter", () => {
-    gsap.set([cursor], { opacity: 1 });
-});
+if (hero) {
+    hero.addEventListener("mouseleave", () => {
+        gsap.set([cursor], { opacity: 0 });
+    });
+
+    hero.addEventListener("mouseenter", () => {
+        gsap.set([cursor], { opacity: 1 });
+    });
+}
 
 // ------------------------------------------------
 // Offcanvas menu
@@ -264,23 +278,25 @@ const container = document.getElementById('cursor-container');
 
 const getCursorSVG = (color) => `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.1868 12.8532L16.8428 14.3189C15.6435 14.7187 14.6841 15.6515 14.2844 16.8774L12.8186 21.2214C11.566 24.9791 6.28925 24.8991 5.11664 21.1414L0.186332 5.28449C-0.77308 2.13975 2.1318 -0.791784 5.24989 0.194278L21.1335 5.12459C24.8645 6.2972 24.9178 11.6006 21.1868 12.8532Z" fill="${color}"/></svg>`;
 
-mockUsers.forEach(user => {
-    const cursorEl = document.createElement('div');
-    cursorEl.className = 'cursor';
+if (container) {
+    mockUsers.forEach(user => {
+        const cursorEl = document.createElement('div');
+        cursorEl.className = 'cursor';
 
-    cursorEl.innerHTML = `
+        cursorEl.innerHTML = `
         <div class="cursor-icon">${getCursorSVG(user.color)}</div>
         <div class="cursor-label" style="background-color: ${user.color}">${user.name}</div>
     `;
 
-    container.appendChild(cursorEl);
+        container.appendChild(cursorEl);
 
-    const startX = Math.random() * window.innerWidth;
-    const startY = Math.random() * window.innerHeight;
-    gsap.set(cursorEl, { x: startX, y: startY });
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+        gsap.set(cursorEl, { x: startX, y: startY });
 
-    animateCursor(cursorEl);
-});
+        animateCursor(cursorEl);
+    });
+}
 
 function animateCursor(cursorEl) {
     const maxX = window.innerWidth - 100;
@@ -443,4 +459,146 @@ gsap.from('[menu] li', {
         start: "top 70%",
         end: "top 30%",
     }
+});
+
+
+// ------------------------------------------------
+// Testimonial swiper
+// ------------------------------------------------
+
+if (document.querySelector('.testimonialSwiper')) {
+
+    var swiper = new Swiper(".testimonialSwiper", {
+        loop: true,
+        navigation: {
+            prevEl: ".testimonial-prev-btn",
+            nextEl: ".testimonial-next-btn",
+        },
+    });
+
+}
+
+
+// ------------------------------------------------
+// Insights swiper
+// ------------------------------------------------
+
+if (document.querySelector('.insightsSwiper')) {
+
+    var swiper = new Swiper(".insightsSwiper", {
+        slidesPerView: 1.2,
+        spaceBetween: 16,
+        loop: true,
+        breakpoints: {
+            992: {
+                slidesPerView: 2.2,
+                spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 2.2,
+                spaceBetween: 40,
+            },
+            1600: {
+                slidesPerView: 2.2,
+                spaceBetween: 60,
+            },
+            1800: {
+                slidesPerView: 2.2,
+                spaceBetween: 80,
+            },
+        },
+    });
+
+}
+
+// ------------------------------------------------
+// Accordion animation
+// ------------------------------------------------
+
+const items = document.querySelectorAll(".accordion-item");
+
+items.forEach((item, index) => {
+    const content = item.querySelector(".accordion-content");
+    const text = content.firstElementChild;
+
+    // INITIAL STATE
+    if (item.classList.contains("open")) {
+        content.style.height = text.scrollHeight + "px";
+    } else {
+        content.style.height = "0px";
+    }
+
+    // CLICK HANDLER
+    const title = item.querySelector(".accordion-title");
+
+    title.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+
+        // CLOSE ALL
+        items.forEach(otherItem => {
+            const otherContent = otherItem.querySelector(".accordion-content");
+
+            gsap.to(otherContent, {
+                height: 0,
+                duration: 0.3
+            });
+
+            otherItem.classList.remove("open");
+        });
+
+        // OPEN CURRENT (if it was closed)
+        if (!isOpen) {
+            const content = item.querySelector(".accordion-content");
+            const text = content.firstElementChild;
+
+            gsap.to(content, {
+                height: text.scrollHeight,
+                duration: 0.3,
+                onComplete: () => {
+                    content.style.height = "auto";
+                }
+            });
+
+            item.classList.add("open");
+        }
+    });
+});
+
+const buttons = document.querySelectorAll(".tab-buttons button");
+const panels = document.querySelectorAll(".tab-panel");
+
+let activeTab = document.querySelector(".tab-panel.active");
+
+buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const target = btn.dataset.tab;
+
+        if (activeTab.dataset.tab === target) return; // avoid useless work
+
+        const newPanel = document.querySelector(`.tab-panel[data-tab="${target}"]`);
+
+        // Animate OUT current
+        gsap.to(activeTab, {
+            opacity: 0,
+            y: 20,
+            duration: 0.3,
+            onComplete: () => {
+                activeTab.classList.remove("active");
+
+                // Animate IN new
+                newPanel.classList.add("active");
+
+                gsap.fromTo(newPanel,
+                    { opacity: 0, y: 20 },
+                    { opacity: 1, y: 0, duration: 0.4 }
+                );
+
+                activeTab = newPanel;
+            }
+        });
+
+        // Update button state
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+    });
 });

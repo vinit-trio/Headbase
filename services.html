@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4848FF">
+    <meta name="description"
+        content="Headbase is an IT solution company that provides innovative technology services and solutions to businesses. We specialize in software development, cloud computing, cybersecurity, and IT consulting.">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <title>Headbase - IT solution company</title>
+
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <!-- <div loader class="fixed inset-0 bg-white z-999999 grid place-items-center p-100">
+        <svg class="max-w-full" width="290" height="247" viewBox="0 0 290 247" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path style="opacity: 0"
+                d="M101.837 4.7793C103.078 2.61937 105.413 1.36212 107.867 1.51172L107.913 1.51465H179.108C183.93 1.82823 186.771 7.13193 184.344 11.3574L184.341 11.3623L53.1826 241.863C50.8326 245.961 45.1449 246.256 42.3643 242.571L42.1045 242.202L2.58008 181.95C1.21985 179.873 1.13782 177.19 2.37207 175.029L2.37109 175.028L101.832 4.78906L101.837 4.7793Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M86.0379 167.773H147.526C152.574 167.773 155.734 173.334 153.119 177.733L114.625 242.312C113.434 244.295 111.314 245.501 109.03 245.501H47.5418C42.4937 245.501 39.3324 239.939 41.949 235.539L80.4461 170.957L80.4451 170.956C81.6258 168.979 83.744 167.774 86.0379 167.773Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M236.668 72.8145C239.102 68.5818 245.107 68.4031 247.786 72.4756L287.417 132.739C288.777 134.811 288.862 137.485 287.634 139.644L226.575 241.218L226.567 241.229L226.56 241.242C225.316 243.402 222.974 244.662 220.509 244.512L220.46 244.509H220.412L148.68 244.805C143.84 244.489 140.998 239.191 143.43 234.961L236.668 72.8145Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M180.282 69.5273H241.937C247.007 69.5273 250.168 75.0929 247.549 79.4883L208.949 144.085C207.765 146.063 205.64 147.271 203.336 147.271H141.681C136.61 147.271 133.449 141.705 136.07 137.31L136.069 137.309L174.669 72.7129C175.852 70.736 177.986 69.5275 180.282 69.5273Z"
+                stroke="#4848FF" stroke-width="2" />
+        </svg>
+    </div> -->
+    <!-- Header -->
+    <header id="header" class="py-20 sm:py-34 text-text sticky top-0 z-99999">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Headbase">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex gap-40 capitalize">
+                        <li>
+                            <a class="link active" href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="link" href="work.html">Work</a>
+                        </li>
+                        <li>
+                            <a class="link" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="link" href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="link" href="career.html">Career</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="34" height="34" x="0" y="0" viewBox="0 0 20 20" style="enable-background:new 0 0 512 512"
+                        xml:space="preserve" class="">
+                        <g>
+                            <path fill="#111" fill-rule="evenodd"
+                                d="M9 15a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1zM3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
+                                clip-rule="evenodd" opacity="1" data-original="#111"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="offcanvas fixed bg-white top-0 bottom-0 right-0 w-full max-w-320 translate-x-full z-50 text-black invisible"
+            id="menu">
+            <button id="close-menu" class="absolute top-20 right-30 font-black">✕</button>
+            <ul class="flex flex-col gap-10 p-30">
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="work.html">Work</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="career.html">Career</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay fixed top-0 bottom-0 right-0 w-full bg-brand/15 backdrop-blur-xs z-40 duration-500"
+            id="overlay"></div>
+        <div class="absolute inset-0 -z-1 header_bg transition-all"></div>
+    </header>
+    <!-- Hero bg -->
+    <div heroBg class="absolute inset-0 -z-2 overflow-hidden">
+        <svg class="absolute inset-0 translate-x-1/2 -translate-y-1/2 mx-auto -mt-[10vh]"
+            xmlns="http://www.w3.org/2000/svg" width="1719" height="1719" viewBox="0 0 1719 1719" fill="none">
+            <circle cx="859.5" cy="859.5" r="799.5" stroke="#7070FF" stroke-opacity="0.2" stroke-width="120" />
+        </svg>
+    </div>
+    <div class="fixed inset-0 -z-1 backdrop-blur-3xl"></div>
+    <main>
+        <!-- Hero section -->
+        <section class="text-center py-spc flex items-center">
+            <div class="container relative flex flex-col gap-20 xl:gap-40">
+                <h1 haroEle class="text-120 font-bold text-black">
+                    Digital Services That Power <i class="text-blue font-semibold">Scalable Business Growth</i>
+                </h1>
+                <p haroEle class="max-w-816 mx-auto text-black">
+                    We help startups, growing businesses, and enterprise teams design,
+                    build, and scale reliable digital products from strategy to long-term execution.
+                </p>
+                <div haroEle class="relative w-fit mx-auto">
+                    <a href="#" class="btn btn_blue">
+                        <span>Start a Project</span>
+                        <img src="assets/images/arrow-right-icon.svg" alt="">
+                    </a>
+                    <div class="left-[calc(100%-20px)] absolute text-left text-gray-500 min-w-max mt-10 hidden md:block"
+                        style="font-family: Segoe Print, Comic Sans MS;">
+                        <img haroEle src="assets/images/rounded-arrow.svg" alt="">
+                        <p haroEle class="rotate-3 absolute top-full left-full min-w-max -mt-10 ml-10">
+                            Good ideas deserve <br>good execution.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Impact section -->
+        <section second_sec class="py-spc">
+            <div class="container">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            Services and <i>Solutions We Offer</i>
+                        </h2>
+                    </div>
+                    <p slideUp class="max-w-820 mx-auto">
+                        We work with creative teams and ambitious founders to turn vision into product with
+                        intuitive UX, standout visuals, and seamless digital experiences that users remember.
+                    </p>
+                </div>
+                <div class="grid max-w-1180 mx-auto gap-20 xl:gap-40">
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-24 lg:p-48 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="flex items-start justify-between gap-16 sm:gap-32">
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                    Word Press - WooCommerce
+                                </h3>
+                                <p class="max-w-566">
+                                    Custom WordPress and WooCommerce solutions built for speed, security, and scalable
+                                    online selling.
+                                </p>
+                            </div>
+                            <div
+                                class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1 shrink-0">
+                                <img class="w-32 sm:w-40" src="assets/images/wordpress.svg" alt="Wordpress icon">
+                            </div>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-16 xl:gap-32">
+                            <div class="flex flex-col gap-12 xl:gap-24">
+                                <div class="aspect-[2.1/1] rounded-lg sm:rounded-2xl overflow-hidden">
+                                    <img src="assets/images/project1.webp" alt="Snowo Distillers"
+                                        class="size-full object-cover">
+                                </div>
+                                <h4 class="text-lg xl:text-xl 2xl:text-2xl font-medium text-black">Snowo Distillers</h4>
+                            </div>
+                            <div class="flex flex-col gap-12 xl:gap-24">
+                                <div class="aspect-[2.1/1] rounded-lg sm:rounded-2xl overflow-hidden">
+                                    <img src="assets/images/project2.webp" alt="Ellitee SkinCare"
+                                        class="size-full object-cover">
+                                </div>
+                                <h4 class="text-lg xl:text-xl 2xl:text-2xl font-medium text-black">Ellitee SkinCare</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-24 lg:p-48 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="flex items-start justify-between gap-16 sm:gap-32">
+                            <div class="flex flex-col gap-8 xl:gap-16">
+                                <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                    Shopify Store
+                                </h3>
+                                <p class="max-w-566">
+                                    High-conversion Shopify stores optimized for performance, branding, and seamless
+                                    customer journeys.
+                                </p>
+                            </div>
+                            <div
+                                class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1 shrink-0">
+                                <img class="w-32 sm:w-40" src="assets/images/shopify.svg" alt="Shopify icon">
+                            </div>
+                        </div>
+                        <div class="grid sm:grid-cols-2 gap-16 xl:gap-32">
+                            <div class="flex flex-col gap-12 xl:gap-24">
+                                <div class="aspect-[2.1/1] rounded-lg sm:rounded-2xl overflow-hidden">
+                                    <img src="assets/images/project3.webp" alt="Ellitee SkinCare"
+                                        class="size-full object-cover">
+                                </div>
+                                <h4 class="text-lg xl:text-xl 2xl:text-2xl font-medium text-black">Ellitee SkinCare</h4>
+                            </div>
+                            <div class="flex flex-col gap-12 xl:gap-24">
+                                <div class="aspect-[2.1/1] rounded-lg sm:rounded-2xl overflow-hidden">
+                                    <img src="assets/images/project4.webp" alt="Underpinnings Lingerie"
+                                        class="size-full object-cover">
+                                </div>
+                                <h4 class="text-lg xl:text-xl 2xl:text-2xl font-medium text-black">Underpinnings
+                                    Lingerie</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Industries section -->
+        <section class="py-spc bg-black text-white">
+            <div class="container">
+                <div class="title white">
+                    <div title>
+                        <h2 slideUp>
+                            <i>Industries</i>
+                        </h2>
+                    </div>
+                    <p class="opacity-80" slideUp>
+                        We leverage the latest technologies to build scalable, performant, and future-proof digital
+                        solutions.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="container 3xl:max-w-full 3xl:p-0 mask-[linear-gradient(90deg,#000_80%,transparent_calc(100%-16px))] 3xl:mask-none">
+                <div class="swiper industriesSwiper 3xl:pl-[calc((100%-1680px)/2)]!">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/fintech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        FinTech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building secure, compliant, and high-conversion financial products. From
+                                        dashboards to customer-facing platforms, we design experiences that build trust
+                                        and perform at scale.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/edtech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        EdTech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Designing learning platforms that prioritize clarity, engagement, and
+                                        accessibility. Across web, mobile, and LMS products, we create UX that supports
+                                        learning—not distraction.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/healthcare.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Healthcare
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building patient-friendly, compliant digital experiences. From healthtech SaaS
+                                        to wellness apps, we balance usability, accessibility, and regulatory
+                                        requirements.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/e-commerce.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        E-commerce
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Creating seamless shopping experiences for DTC brands and enterprise platforms.
+                                        Our work supports discovery, conversion, retention, and end-to-end user
+                                        journeys.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/real-estate.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Real Estate
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Designing digital platforms that connect people and properties. From listing
+                                        platforms to internal tools, we build intuitive, scalable real estate
+                                        experiences.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
+                            <div
+                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
+                                <div
+                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
+                                    <img class="w-32 sm:w-40" src="assets/images/mi-tech.svg" alt="">
+                                </div>
+                                <div class="flex flex-col gap-8 xl:gap-16">
+                                    <h3 class="text-xl lg:text-2xl font-medium">
+                                        Manufacturing & Industrial Tech
+                                    </h3>
+                                    <p class="opacity-80">
+                                        Building digital tools for operations, analytics, and internal systems. We focus
+                                        on clarity, efficiency, and usability in complex industrial environments.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- We simplify -->
+        <section class="py-spc overflow-x-hidden">
+            <div class="container relative">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            We simplify <br> <i>Design and Development</i> process
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        A structured approach that turns complex problems into clear, scalable solutions.
+                    </p>
+                </div>
+                <div
+                    class="our_process grid lg:grid-cols-2 xl:grid-cols-1 gap-32 xl:gap-88 xl:place-items-center pt-50">
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/brain-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Understand the Problem
+                            </h3>
+                            <p>
+                                We study the business, users, and constraints to identify the real problem.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/idea-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Define the Direction
+                            </h3>
+                            <p>
+                                We align goals, priorities, and scope to set a clear product direction.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Design the Experience
+                            </h3>
+                            <p>
+                                We design usable, scalable experiences aligned with strategy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/qa-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Build and Quality Assurance (QA)
+                            </h3>
+                            <p>
+                                We build reliable software and check its quality.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
+                        <div
+                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
+                            <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
+                        </div>
+                        <div class="flex flex-col sm:gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                Ship and Grow
+                            </h3>
+                            <p>
+                                Launch, learn, and continuously improve.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute clip-1 bg-brand/5 size-[30vw] inset-0 m-auto -z-2"></div>
+                <div class="absolute inset-0 blur-3xl -z-1"></div>
+            </div>
+        </section>
+        <!-- Trusted by forward -->
+        <section class="py-spc overflow-hidden text-center">
+            <div class="container relative">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Trusted by forward - <i>Thinking teams</i>
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        Empowering fast-growing companies with design - driven solutions built for scale.
+                    </p>
+                </div>
+                <div class="flex items-center gap-16 sm:gap-40 md:gap-60 xl:gap-120 max-w-880 mx-auto">
+                    <button class="testimonial-prev-btn w-40 md:w-80 shrink-0">
+                        <img src="assets/images/arrow-left.png" alt="">
+                    </button>
+                    <div class="swiper testimonialSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <svg class="w-60 sm:w-120 mb-12 xl:mb-24" viewBox="0 0 120 120" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M75 105H105C106.989 105 108.897 104.21 110.303 102.803C111.71 101.397 112.5 99.4891 112.5 97.5V67.5C112.5 65.5109 111.71 63.6032 110.303 62.1967C108.897 60.7902 106.989 60 105 60H82.5C82.5 43.455 95.955 30 112.5 30V15C87.6825 15 67.5 35.1825 67.5 60V97.5C67.5 99.4891 68.2902 101.397 69.6967 102.803C71.1032 104.21 73.0109 105 75 105ZM15 105H45C46.9891 105 48.8968 104.21 50.3033 102.803C51.7098 101.397 52.5 99.4891 52.5 97.5V67.5C52.5 65.5109 51.7098 63.6032 50.3033 62.1967C48.8968 60.7902 46.9891 60 45 60H22.5C22.5 43.455 35.955 30 52.5 30V15C27.6825 15 7.5 35.1825 7.5 60V97.5C7.5 99.4891 8.29018 101.397 9.6967 102.803C11.1032 104.21 13.0109 105 15 105Z"
+                                            fill="#C7C7FF" />
+                                    </svg>
+                                    <p class="mb-30 xl:mb-60">
+                                        As a real estate agent, Headbase has completely transformed the way I manage my
+                                        listings and interactions
+                                    </p>
+                                    <img src="assets/images/reviewer.png" alt="John Walker"
+                                        class="w-50 sm:w-80 mb-8 xl:mb-16">
+                                    <p class="font-medium text-black xl:text-xl 2xl:text-2xl">John Walker</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="flex flex-col items-center">
+                                    <svg class="w-60 sm:w-120 mb-12 xl:mb-24" viewBox="0 0 120 120" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M75 105H105C106.989 105 108.897 104.21 110.303 102.803C111.71 101.397 112.5 99.4891 112.5 97.5V67.5C112.5 65.5109 111.71 63.6032 110.303 62.1967C108.897 60.7902 106.989 60 105 60H82.5C82.5 43.455 95.955 30 112.5 30V15C87.6825 15 67.5 35.1825 67.5 60V97.5C67.5 99.4891 68.2902 101.397 69.6967 102.803C71.1032 104.21 73.0109 105 75 105ZM15 105H45C46.9891 105 48.8968 104.21 50.3033 102.803C51.7098 101.397 52.5 99.4891 52.5 97.5V67.5C52.5 65.5109 51.7098 63.6032 50.3033 62.1967C48.8968 60.7902 46.9891 60 45 60H22.5C22.5 43.455 35.955 30 52.5 30V15C27.6825 15 7.5 35.1825 7.5 60V97.5C7.5 99.4891 8.29018 101.397 9.6967 102.803C11.1032 104.21 13.0109 105 15 105Z"
+                                            fill="#C7C7FF" />
+                                    </svg>
+                                    <p class="mb-30 xl:mb-60">
+                                        As a real estate agent, Headbase has completely transformed the way I manage my
+                                        listings and interactions
+                                    </p>
+                                    <img src="assets/images/reviewer.png" alt="John Walker"
+                                        class="w-50 sm:w-80 mb-8 xl:mb-16">
+                                    <p class="font-medium text-black xl:text-xl 2xl:text-2xl">John Walker</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="testimonial-next-btn w-40 md:w-80 shrink-0 -scale-100">
+                        <img src="assets/images/arrow-left.png" alt="">
+                    </button>
+                </div>
+                <div class="absolute clip-1 bg-brand/5 size-[30vw] inset-0 m-auto -z-2"></div>
+            </div>
+        </section>
+        <!-- Case Studies -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Case Studies & <i>Insights</i>
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        we partner with ambitious teams to solve real problems, ship better products, and drive lasting
+                        results.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="container 3xl:max-w-full 3xl:p-0 mask-[linear-gradient(90deg,#000_80%,transparent_calc(100%-16px))] 3xl:mask-none">
+                <div class="swiper insightsSwiper 3xl:pl-[calc((100%-1680px)/2)]!">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                                <a href="#" class="absolute inset-0 z-1"></a>
+                                <div
+                                    class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
+                                    <img src="assets/images/project1.webp" alt=""
+                                        class="absolute size-full inset-0 object-cover">
+                                    <div
+                                        class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
+                                    </div>
+                                </div>
+                                <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                                    <div class="badge green">Website Design</div>
+                                    <div class="badge blue">E-Commerce</div>
+                                    <div class="badge yellow">Skincare</div>
+                                </div>
+                                <h3 class="text-xl xl:text-2xl text-black">Ellitee SkinCare</h3>
+                                <p>
+                                    A science-led skincare website focused on trust, education, and elegant product
+                                    storytelling.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                                <a href="#" class="absolute inset-0 z-1"></a>
+                                <div
+                                    class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
+                                    <img src="assets/images/project2.webp" alt=""
+                                        class="absolute size-full inset-0 object-cover">
+                                    <div
+                                        class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
+                                    </div>
+                                </div>
+                                <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                                    <div class="badge purple">Fashion</div>
+                                    <div class="badge green">Web Development</div>
+                                    <div class="badge blue">E-Commerce</div>
+                                </div>
+                                <h3 class="text-xl xl:text-2xl text-black">Underpinnings Lingerie</h3>
+                                <p>
+                                    An inclusive, body-positive eCommerce platform designed for confidence and perfect
+                                    fit discovery.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                                <a href="#" class="absolute inset-0 z-1"></a>
+                                <div
+                                    class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
+                                    <img src="assets/images/project3.webp" alt=""
+                                        class="absolute size-full inset-0 object-cover">
+                                    <div
+                                        class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
+                                    </div>
+                                </div>
+                                <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                                    <div class="badge blue">Liquor</div>
+                                    <div class="badge yellow">Shopify Store</div>
+                                    <div class="badge red">Luxury E-Commerce</div>
+                                </div>
+                                <h3 class="text-xl xl:text-2xl text-black">Snowo Distillers</h3>
+                                <p>
+                                    A luxury Shopify store crafted to showcase heritage, awards, and premium brand
+                                    identity.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="group relative flex flex-col gap-8 3xl:gap-16">
+                                <a href="#" class="absolute inset-0 z-1"></a>
+                                <div
+                                    class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
+                                    <img src="assets/images/project4.webp" alt=""
+                                        class="absolute size-full inset-0 object-cover">
+                                    <div
+                                        class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
+                                    </div>
+                                </div>
+                                <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
+                                    <div class="badge green">Street Art</div>
+                                    <div class="badge blue">E-Commerce</div>
+                                    <div class="badge yellow">Web Development</div>
+                                </div>
+                                <h3 class="text-xl xl:text-2xl text-black">Frank Art Color</h3>
+                                <p>
+                                    A bold, immersive portfolio website for showcasing street art and creative services.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FAQ -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="grid grid-cols-2 gap-24 xl:gap-48">
+                    <div class="title max-w-500">
+                        <div title>
+                            <h2 slideUp>
+                                Frequently asked <i>questions</i>
+                            </h2>
+                        </div>
+                        <p slideUp>
+                            Explore our frequently asked questions to learn more about Neuros’s features, security,
+                            integration capabilities, and more
+                        </p>
+                    </div>
+                    <ul class="accordion flex flex-col gap-24 xl:gap-48">
+                        <li class="accordion-item open">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>What types of services do you offer?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    We offer end-to-end digital services including UX/UI design, web and app
+                                    development, eCommerce, and long-term product support. Our work spans strategy,
+                                    design, build, and post-launch improvement.
+                                    development, eCommerce, and long-term product support. Our work spans strategy,
+                                    design, build, and post-launch improvement.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>Who are your services best suited for?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis nemo nesciunt
+                                    minus tempora id aspernatur quae numquam. Autem debitis accusantium ipsam inventore
+                                    nesciunt necessitatibus reiciendis suscipit excepturi. Quas, molestiae corporis!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>Do you work on new products as well as existing ones?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis nemo nesciunt
+                                    minus tempora id aspernatur quae numquam. Autem debitis accusantium ipsam inventore
+                                    nesciunt necessitatibus reiciendis suscipit excepturi. Quas, molestiae corporis!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>How do projects typically start?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis nemo nesciunt
+                                    minus tempora id aspernatur quae numquam. Autem debitis accusantium ipsam inventore
+                                    nesciunt necessitatibus reiciendis suscipit excepturi. Quas, molestiae corporis!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>Can we hire you for a single service or ongoing support?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis nemo nesciunt
+                                    minus tempora id aspernatur quae numquam. Autem debitis accusantium ipsam inventore
+                                    nesciunt necessitatibus reiciendis suscipit excepturi. Quas, molestiae corporis!
+                                </p>
+                            </div>
+                        </li>
+                        <li class="accordion-item">
+                            <div class="accordion-title">
+                                <h3 class="cursor-pointer select-none flex items-center justify-between">
+                                    <div class="flex gap-8 xl:gap-16 text-black font-medium">
+                                        <span class="inline-block bg-brand w-4 grow rounded-full my-4"></span>
+                                        <span>How do you estimate timelines and costs?</span>
+                                    </div>
+                                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="26" viewBox="0 0 24 24" fill="none"
+                                        stroke="#989898" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m6 9 6 6 6-6" />
+                                    </svg>
+                                </h3>
+                            </div>
+                            <div class="accordion-content overflow-hidden h-0">
+                                <p class="pt-15 xl:pt-30 text-base sm:text-lg">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis nemo nesciunt
+                                    minus tempora id aspernatur quae numquam. Autem debitis accusantium ipsam inventore
+                                    nesciunt necessitatibus reiciendis suscipit excepturi. Quas, molestiae corporis!
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="relative py-spc border-t border-black/10 overflow-hidden">
+        <div class="container">
+            <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-32 gap-y-40 sm:gap-y-80">
+                <div>
+                    <div class="mb-32 xl:mb-64">
+                        <img src="assets/images/logo.svg" alt="HeadBase" class="w-275">
+                    </div>
+                    <div title>
+                        <h2 slideUp class="text-40 font-medium text-black">
+                            The agency <br>
+                            for <i class="font-semibold text-blue">impatient</i> <br>
+                            brands
+                        </h2>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Quick links
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Services</a></li>
+                        <li><a class="link hover:text-black" href="#">Work</a></li>
+                        <li><a class="link hover:text-black" href="#">About</a></li>
+                        <li><a class="link hover:text-black" href="#">Contact</a></li>
+                        <li><a class="link hover:text-black" href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Services
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Wordpress</a></li>
+                        <li><a class="link hover:text-black" href="#">Shopify Store</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Design</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Development</a></li>
+                        <li><a class="link hover:text-black" href="#">UI/UX Design</a></li>
+                        <li><a class="link hover:text-black" href="#">App Design</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-74">
+                    <p slideUp>
+                        SH-403 Shiven Shoppers, Adajan DN,
+                        Surat – 395009, Gujarat, India
+                    </p>
+                    <ul slideUp class="flex gap-8 xl:gap-16">
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/Instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/LinkedIn.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <a slideUp href="mailto:hr@headbase.com" class="text-blue ul_effect w-fit">hr@headbase.com</a>
+                    <p slideUp>&copy; <span id="currentYear">2026</span>-Headbase. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute clip-1 bg-brand/10 size-[30vw] -bottom-100 left-0 -z-2"></div>
+        <div class="absolute inset-0 blur-3xl -z-1"></div>
+    </footer>
+    <!-- Back to top -->
+    <button id="backToTop"
+        class="fixed opacity-0 bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all duration-500 hover:text-blue hover:bottom-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 12 7-7 7 7" />
+            <path d="M12 19V5" />
+        </svg>
+    </button>
+    <!-- Scripts -->
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
