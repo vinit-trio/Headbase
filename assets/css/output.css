@@ -283,8 +283,14 @@
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
+  .top-105 {
+    top: calc(var(--spacing) * 105);
+  }
   .top-full {
     top: 100%;
+  }
+  .top-spc {
+    top: var(--spacing-spc);
   }
   .right-0 {
     right: calc(var(--spacing) * 0);
