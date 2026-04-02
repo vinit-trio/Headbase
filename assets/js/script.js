@@ -617,3 +617,15 @@ if (fileInput) {
         }
     });
 }
+
+
+// ------------------------------------------------
+// Load swiper
+// ------------------------------------------------
+
+if (document.querySelector('.swiper')) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/css/swiper.css';
+    document.head.appendChild(link);
+}
