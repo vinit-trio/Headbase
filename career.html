@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4848FF">
+    <meta name="description"
+        content="Headbase is an IT solution company that provides innovative technology services and solutions to businesses. We specialize in software development, cloud computing, cybersecurity, and IT consulting.">
+
+    <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/images/favicon/site.webmanifest" />
+
+    <title>Headbase - IT solution company</title>
+
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div loader class="fixed inset-0 bg-white z-999999 grid place-items-center p-100">
+        <svg class="max-w-full" width="290" height="247" viewBox="0 0 290 247" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path style="opacity: 0"
+                d="M101.837 4.7793C103.078 2.61937 105.413 1.36212 107.867 1.51172L107.913 1.51465H179.108C183.93 1.82823 186.771 7.13193 184.344 11.3574L184.341 11.3623L53.1826 241.863C50.8326 245.961 45.1449 246.256 42.3643 242.571L42.1045 242.202L2.58008 181.95C1.21985 179.873 1.13782 177.19 2.37207 175.029L2.37109 175.028L101.832 4.78906L101.837 4.7793Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M86.0379 167.773H147.526C152.574 167.773 155.734 173.334 153.119 177.733L114.625 242.312C113.434 244.295 111.314 245.501 109.03 245.501H47.5418C42.4937 245.501 39.3324 239.939 41.949 235.539L80.4461 170.957L80.4451 170.956C81.6258 168.979 83.744 167.774 86.0379 167.773Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M236.668 72.8145C239.102 68.5818 245.107 68.4031 247.786 72.4756L287.417 132.739C288.777 134.811 288.862 137.485 287.634 139.644L226.575 241.218L226.567 241.229L226.56 241.242C225.316 243.402 222.974 244.662 220.509 244.512L220.46 244.509H220.412L148.68 244.805C143.84 244.489 140.998 239.191 143.43 234.961L236.668 72.8145Z"
+                stroke="#4848FF" stroke-width="2" />
+            <path style="opacity: 0"
+                d="M180.282 69.5273H241.937C247.007 69.5273 250.168 75.0929 247.549 79.4883L208.949 144.085C207.765 146.063 205.64 147.271 203.336 147.271H141.681C136.61 147.271 133.449 141.705 136.07 137.31L136.069 137.309L174.669 72.7129C175.852 70.736 177.986 69.5275 180.282 69.5273Z"
+                stroke="#4848FF" stroke-width="2" />
+        </svg>
+    </div>
+    <!-- Header -->
+    <header id="header" class="py-20 sm:py-34 text-text sticky top-0 z-99999">
+        <div class="container">
+            <div class="flex justify-between items-center">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="Headbase">
+                </a>
+                <nav class="hidden md:block">
+                    <ul class="flex gap-40 capitalize">
+                        <li>
+                            <a class="link" href="services.html">Services</a>
+                        </li>
+                        <li>
+                            <a class="link" href="work.html">Work</a>
+                        </li>
+                        <li>
+                            <a class="link" href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a class="link" href="contact.html">Contact</a>
+                        </li>
+                        <li>
+                            <a class="link active" href="career.html">Career</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="menu-toggle" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        width="34" height="34" x="0" y="0" viewBox="0 0 20 20" style="enable-background:new 0 0 512 512"
+                        xml:space="preserve" class="">
+                        <g>
+                            <path fill="#111" fill-rule="evenodd"
+                                d="M9 15a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2h-6a1 1 0 0 1-1-1zM3 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1zm0 5a1 1 0 0 1 1-1h12a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1z"
+                                clip-rule="evenodd" opacity="1" data-original="#111"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="offcanvas fixed bg-white top-0 bottom-0 right-0 w-full max-w-320 translate-x-full z-50 text-black invisible"
+            id="menu">
+            <button id="close-menu" class="absolute top-20 right-30 font-black">✕</button>
+            <ul class="flex flex-col gap-10 p-30">
+                <li>
+                    <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="work.html">Work</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="career.html">Career</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="overlay fixed top-0 bottom-0 right-0 w-full bg-brand/15 backdrop-blur-xs z-40 duration-500"
+            id="overlay"></div>
+        <div class="absolute inset-0 -z-1 header_bg transition-all"></div>
+    </header>
+    <!-- Hero bg -->
+    <div heroBg class="absolute inset-0 -z-2 overflow-hidden">
+        <svg class="max-w-full absolute inset-0 -translate-x-1/2 -translate-y-1/2 mx-auto -mt-[10vh]"
+            xmlns="http://www.w3.org/2000/svg" width="1719" height="1719" viewBox="0 0 1719 1719" fill="none">
+            <circle cx="859.5" cy="859.5" r="799.5" stroke="#7070FF" stroke-opacity="0.2" stroke-width="120" />
+        </svg>
+    </div>
+    <div class="fixed inset-0 -z-1 backdrop-blur-3xl"></div>
+    <main>
+        <!-- Hero section -->
+        <section class="min-h-[calc(100vh-105px)] text-center py-spc flex items-center">
+            <div class="container relative flex flex-col gap-20 xl:gap-40">
+                <h1 haroEle class="text-120 font-bold text-black">
+                    Build Your <br> <i class="text-blue font-semibold">Dream Career</i>
+                </h1>
+                <p haroEle class="max-w-816 mx-auto text-black">
+                    Join a team that values innovation, growth, and meaningful work.
+                </p>
+                <div haroEle class="w-fit mx-auto">
+                    <a href="#" class="btn btn_blue">
+                        <span>Join Our Team</span>
+                        <img src="assets/images/team-icon.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Who We Work With section -->
+        <section second_sec class="py-spc text-center">
+            <div class="container">
+                <div class="title">
+                    <div title>
+                        <h2 slideUp>
+                            Why Join <i>Our Team</i>
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        Collaborate with talented people, Build impactful products, <br> Grow your career with purpose.
+                    </p>
+                </div>
+                <div class="team_wrap">
+                    <div class="team_cards grid md:grid-cols-2 2xl:grid-cols-3">
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/founder.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Leadership & Mentorship
+                            </h3>
+                            <p>
+                                Get hands-on guidance, regular feedback, and career coaching.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/team.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Strong Engineering Culture
+                            </h3>
+                            <p>
+                                Build scalable systems using best practices and modern tools.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/Book.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Continuous Learning & Growth
+                            </h3>
+                            <p>
+                                Grow your skills through training, mentorship, and hands-on experience.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/organizations.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Enterprise-Level Exposure
+                            </h3>
+                            <p>
+                                Learn how real-world systems operate at scale.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/secure.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                Quality & Security Focus
+                            </h3>
+                            <p>
+                                Build products you can trust and be proud of.
+                            </p>
+                        </div>
+                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
+                            <div
+                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
+                                <img class="w-32 sm:w-40" src="assets/images/earth.svg" alt="">
+                            </div>
+                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
+                                lobal Collaboration
+                            </h3>
+                            <p>
+                                Improve communication, teamwork, and global exposure.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card_effect absolute bg-brand/10 -z-1"></div>
+                </div>
+            </div>
+        </section>
+        <!-- What We Do section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            What We Do <i>Best</i>
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        End-to-end digital solutions tailored to your unique business needs.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-2 2xl:grid-cols-3 gap-16 3xl:gap-32">
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                UI/UX Designer
+                            </h3>
+                            <p>
+                                On-site · Full Time
+                            </p>
+                        </div>
+                        <a href="career-details.html" class="btn btn_transparent text-blue p-0">
+                            <span>Job Details</span>
+                            <svg class="size-24">
+                                <use href="assets/images/arrow-right-icon.svg#arrow-right-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/shopify.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                UI/UX Designer
+                            </h3>
+                            <p>
+                                On-site · Full Time
+                            </p>
+                        </div>
+                        <a href="career-details.html" class="btn btn_transparent text-blue p-0">
+                            <span>Job Details</span>
+                            <svg class="size-24">
+                                <use href="assets/images/arrow-right-icon.svg#arrow-right-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/web-dev.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                UI/UX Designer
+                            </h3>
+                            <p>
+                                On-site · Full Time
+                            </p>
+                        </div>
+                        <a href="career-details.html" class="btn btn_transparent text-blue p-0">
+                            <span>Job Details</span>
+                            <svg class="size-24">
+                                <use href="assets/images/arrow-right-icon.svg#arrow-right-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div slideUp
+                        class="rounded-xl lg:rounded-3xl p-16 lg:p-28 border border-border shadow-1 flex flex-col gap-16 xl:gap-32 hover:border-brand transition-colors">
+                        <div class="border border-border p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-1">
+                            <img class="w-32 sm:w-40" src="assets/images/wordpress.svg" alt="">
+                        </div>
+                        <div class="flex flex-col gap-8 xl:gap-16">
+                            <h3 class="text-xl lg:text-2xl font-medium text-black">
+                                UI/UX Designer
+                            </h3>
+                            <p>
+                                On-site · Full Time
+                            </p>
+                        </div>
+                        <a href="career-details.html" class="btn btn_transparent text-blue p-0">
+                            <span>Job Details</span>
+                            <svg class="size-24">
+                                <use href="assets/images/arrow-right-icon.svg#arrow-right-icon"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our culture section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="title text-center">
+                    <div title>
+                        <h2 slideUp>
+                            Our Culture & <br> <i>Work Environment</i>
+                        </h2>
+                    </div>
+                </div>
+                <div class="culture_gallery">
+                    <div class="gallery-item row-span-3 md:row-span-5">
+                        <img src="assets/images/gallery-img-1.webp" alt="Gallery image 1">
+                    </div>
+                    <div class="gallery-item row-span-5 md:row-span-3">
+                        <img src="assets/images/gallery-img-2.webp" alt="Gallery image 2">
+                    </div>
+                    <div class="gallery-item row-span-4 md:row-span-4">
+                        <img src="assets/images/gallery-img-3.webp" alt="Gallery image 3">
+                    </div>
+                    <div class="gallery-item row-span-4 md:row-span-4">
+                        <img src="assets/images/gallery-img-4.webp" alt="Gallery image 4">
+                    </div>
+                    <div class="gallery-item row-span-4 md:row-span-4">
+                        <img src="assets/images/gallery-img-5.webp" alt="Gallery image 5">
+                    </div>
+                    <div class="gallery-item row-span-5 md:row-span-3">
+                        <img src="assets/images/gallery-img-6.webp" alt="Gallery image 6">
+                    </div>
+                    <div class="gallery-item row-span-4 md:row-span-5">
+                        <img src="assets/images/gallery-img-7.webp" alt="Gallery image 7">
+                    </div>
+                    <div class="gallery-item row-span-5 md:row-span-4">
+                        <img src="assets/images/gallery-img-8.webp" alt="Gallery image 8">
+                    </div>
+                    <div class="gallery-item row-span-4 md:row-span-4">
+                        <img src="assets/images/gallery-img-9.webp" alt="Gallery image 9">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Start journey section -->
+        <section class="py-spc">
+            <div class="container">
+                <div class="flex not-xl:flex-wrap items-end justify-between gap-32 mb-40 xl:mb-80">
+                    <div class="title m-0" title>
+                        <h2 slideUp>
+                            Ready to <i>Start Your Journey ?</i>
+                        </h2>
+                    </div>
+                </div>
+                <form class="grid lg:grid-cols-2 gap-30 sm:gap-40 mb-40 text-black">
+                    <div class="input-group flex flex-col justify-between md:gap-12">
+                        <label for="name" class="text-2xl font-medium">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="William Patel"
+                            class="py-12 xl:py-24 border-b border-border outline-none focus:border-black">
+                    </div>
+                    <div class="input-group flex flex-col justify-between md:gap-12">
+                        <label for="resume" class="text-2xl font-medium">Upload Resume</label>
+                        <div
+                            class="resume_container relative py-12 xl:py-24 border-b border-border focus-within:border-black text-dark">
+                            <p id="uploadText">Drag and Drop or Upload Resume</p>
+                            <input type="file" id="resumeInput" class="absolute inset-0 size-full opacity-0" required>
+                        </div>
+                    </div>
+                </form>
+                <a href="#" class="btn grow btn_blue w-fit">
+                    <span>Send Message</span>
+                    <img src="assets/images/arrow-right-icon.svg" alt="">
+                </a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="relative py-spc border-t border-black/10 overflow-hidden">
+        <div class="container">
+            <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-32 gap-y-40 sm:gap-y-80">
+                <div>
+                    <div class="mb-32 xl:mb-64">
+                        <img src="assets/images/logo.svg" alt="HeadBase" class="w-275">
+                    </div>
+                    <div title>
+                        <h2 slideUp class="text-40 font-medium text-black">
+                            The agency <br>
+                            for <i class="font-semibold text-blue">impatient</i> <br>
+                            brands
+                        </h2>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Quick links
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Services</a></li>
+                        <li><a class="link hover:text-black" href="#">Work</a></li>
+                        <li><a class="link hover:text-black" href="#">About</a></li>
+                        <li><a class="link hover:text-black" href="#">Contact</a></li>
+                        <li><a class="link hover:text-black" href="#">Career</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 not-xl:order-last">
+                    <div class="link_title font-medium text-2xl text-black">
+                        Services
+                    </div>
+                    <ul class="space-y-20" menu>
+                        <li><a class="link hover:text-black" href="#">Wordpress</a></li>
+                        <li><a class="link hover:text-black" href="#">Shopify Store</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Design</a></li>
+                        <li><a class="link hover:text-black" href="#">Web Development</a></li>
+                        <li><a class="link hover:text-black" href="#">UI/UX Design</a></li>
+                        <li><a class="link hover:text-black" href="#">App Design</a></li>
+                    </ul>
+                </div>
+                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-74">
+                    <p slideUp>
+                        SH-403 Shiven Shoppers, Adajan DN,
+                        Surat – 395009, Gujarat, India
+                    </p>
+                    <ul slideUp class="flex gap-8 xl:gap-16">
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/Instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"
+                                class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
+                                <img src="assets/images/LinkedIn.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <a slideUp href="mailto:hr@headbase.com" class="text-blue ul_effect w-fit">hr@headbase.com</a>
+                    <p slideUp>&copy; <span id="currentYear">2026</span>-Headbase. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+        <div class="absolute clip-1 bg-brand/10 size-[30vw] -bottom-100 left-0 -z-2"></div>
+        <div class="absolute inset-0 blur-3xl -z-1"></div>
+    </footer>
+    <!-- Back to top -->
+    <button id="backToTop"
+        class="fixed opacity-0 bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all duration-500 hover:text-blue hover:bottom-50">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m5 12 7-7 7 7" />
+            <path d="M12 19V5" />
+        </svg>
+    </button>
+    <!-- Scripts -->
+    <script src="assets/js/lenis.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/ScrollTrigger.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

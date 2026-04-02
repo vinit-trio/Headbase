@@ -239,16 +239,95 @@
         width: 0;
         height: 0;
     }
+
+    .culture_gallery {
+        @apply grid gap-16 3xl:gap-32 grid-cols-2 md:grid-cols-3 auto-rows-[30px] sm:auto-rows-[50px] xl:auto-rows-[100px];
+    }
+
+    .culture_gallery .gallery-item {
+        @apply relative size-full rounded-lg md:rounded-3xl overflow-hidden
+    }
+
+    .culture_gallery .gallery-item img {
+        @apply absolute inset-0 size-full object-cover
+    }
+
+    .mixed_content{
+        @apply text-black
+    }
+
+    .mixed_content hr{
+        @apply border-none py-15 xl:py-40
+    }
+
+    .mixed_content h2{
+        @apply text-64
+    }
+
+    .mixed_content h3{
+        @apply text-2xl sm:text-3xl lg:text-4xl 2xl:text-5xl mb-24 xl:mb-48
+    }
+
+    .mixed_content ul{
+        @apply flex flex-col gap-12 xl:gap-24
+    }
 }
 
-.list_star li::before{
+select,
+::picker(select) {
+    appearance: base-select;
+}
+
+select::picker-icon {
+    display: none;
+}
+
+option::checkmark {
+    display: none;
+}
+
+option {
+    padding: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+option:last-child {
+    border-bottom: none;
+}
+
+option:hover {
+    background-color: var(--color-brand);
+    color: var(--color-white);
+}
+
+option:disabled {
+    display: none;
+}
+
+option:checked {
+    background-color: var(--color-border);
+    color: var(--color-black);
+}
+
+select:has(option:disabled:checked),
+::placeholder {
+    color: var(--color-dark);
+}
+
+.list_star li {
+    display: flex;
+    gap: 12px;
+}
+
+.list_star li::before {
     content: '';
-    display: inline-block;
+    display: block;
+    flex-shrink: 0;
     width: 12px;
     height: 12px;
     background-image: url('../images/star.svg');
-    margin-top: -2px;
-    margin-right: 12px;
+    background-size: cover;
+    margin-top: 8px;
 }
 
 .expertise_card,
@@ -407,6 +486,47 @@ html.lenis body {
     opacity: 0;
     position: relative;
     right: -500px;
+}
+
+#world_map circle {
+    fill: #FC750E;
+}
+
+#world_map #circle1 {
+    fill: #FC750E !important;
+}
+
+#world_map #circle2 {
+    opacity: .6;
+    animation-delay: 0.4s;
+}
+
+#world_map #circle3 {
+    opacity: .5;
+    animation-delay: 0.8s;
+}
+
+#world_map #circle4 {
+    opacity: .2;
+    animation-delay: 1.2s;
+}
+
+#world_map circle {
+    animation: ping2 2s infinite;
+}
+
+@keyframes ping2 {
+    0% {
+        fill: #fc750e00;
+    }
+
+    70% {
+        fill: #FC750E;
+    }
+
+    100% {
+        fill: #fc750e00;
+    }
 }
 
 @media(min-width:1400px) {

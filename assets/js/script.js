@@ -13,7 +13,7 @@ const lenis = new Lenis({
 });
 
 lenis.scrollTo(0, { immediate: true });
-// lenis.stop();
+lenis.stop();
 
 
 // ------------------------------------------------
@@ -24,47 +24,41 @@ const loadertl = gsap.timeline({
     defaults: { ease: "power4.out" }
 });
 
-// const loaderPaths = gsap.utils.toArray("[loader] path");
+const loaderPaths = gsap.utils.toArray("[loader] path");
 
-// loaderPaths.forEach((path) => {
-//     const length = path.getTotalLength();
+loaderPaths.forEach((path) => {
+    const length = path.getTotalLength();
 
-//     gsap.set(path, {
-//         strokeDasharray: length,
-//         strokeDashoffset: length
-//     });
+    gsap.set(path, {
+        strokeDasharray: length,
+        strokeDashoffset: length
+    });
 
-//     loadertl.to(path, {
-//         opacity: 1,
-//         strokeDashoffset: 0,
-//         duration: 1.5
-//     }, "<");
-// });
+    loadertl.to(path, {
+        opacity: 1,
+        strokeDashoffset: 0,
+        duration: .5
+    }, "<");
+});
 
-// loadertl.to('[loader] svg', {
-//     opacity: 0,
-// });
+loadertl.to('[loader] svg', {
+    opacity: 0,
+});
 
-// loadertl.to('[loader]', {
-//     opacity: 0,
-//     display: 'none',
-//     onComplete: () => {
-//         lenis.start();
-//     }
-// });
+loadertl.to('[loader]', {
+    opacity: 0,
+    display: 'none',
+    onComplete: () => {
+        lenis.start();
+    }
+});
 
-// loadertl.from('[heroBg]', {
-//     opacity: 0,
-//     y: -150,
-//     ease: "power2.out",
-// });
-
-// loadertl.from('[haroEle]', {
-//     opacity: 0,
-//     y: 150,
-//     stagger: .2,
-//     ease: "power2.out",
-// });
+loadertl.from('[haroEle]', {
+    opacity: 0,
+    y: 150,
+    stagger: .2,
+    ease: "power2.out",
+});
 
 if (document.querySelector('#cursor-container')) {
 
@@ -564,6 +558,10 @@ items.forEach((item, index) => {
     });
 });
 
+// ------------------------------------------------
+// Tab animation
+// ------------------------------------------------
+
 const buttons = document.querySelectorAll(".tab-buttons button");
 const panels = document.querySelectorAll(".tab-panel");
 
@@ -602,3 +600,32 @@ buttons.forEach(btn => {
         btn.classList.add("active");
     });
 });
+
+// ------------------------------------------------
+// Inject map
+// ------------------------------------------------
+
+const map = document.querySelector("#world_map");
+
+if (map) {
+    fetch("assets/images/world-map.svg")
+        .then(res => res.text())
+        .then(svg => {
+            map.innerHTML = svg;
+        });
+}
+
+// ------------------------------------------------
+// Upload file
+// ------------------------------------------------
+
+const fileInput = document.getElementById('resumeInput');
+const uploadText = document.getElementById('uploadText');
+
+if (fileInput) {
+    fileInput.addEventListener('change', function () {
+        if (this.files.length > 0) {
+            uploadText.textContent = this.files[0].name;
+        }
+    });
+}

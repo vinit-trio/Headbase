@@ -39,20 +39,6 @@
                 stroke="#4848FF" stroke-width="2" />
         </svg>
     </div>
-    <!-- Multi cursor -->
-    <div id="cursor-container" class="hidden xl:block"></div>
-    <!-- Cursor -->
-    <div class="own_cursor hidden xl:block transition-opacity z-9999 opacity-0 fixed select-none pointer-events-none"
-        id="myCursor">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M21.1868 12.8532L16.8428 14.3189C15.6435 14.7187 14.6841 15.6515 14.2844 16.8774L12.8186 21.2214C11.566 24.9791 6.28925 24.8991 5.11664 21.1414L0.186332 5.28449C-0.77308 2.13975 2.1318 -0.791784 5.24989 0.194278L21.1335 5.12459C24.8645 6.2972 24.9178 11.6006 21.1868 12.8532Z"
-                fill="#00C951" />
-        </svg>
-        <div class="bg-green-500 mx-25 rounded-md py-9 px-18 text-white">
-            You
-        </div>
-    </div>
     <!-- Header -->
     <header id="header" class="py-20 sm:py-34 text-text sticky top-0 z-99999">
         <div class="container">
@@ -63,7 +49,7 @@
                 <nav class="hidden md:block">
                     <ul class="flex gap-40 capitalize">
                         <li>
-                            <a class="link" href="services.html">Services</a>
+                            <a class="link active" href="services.html">Services</a>
                         </li>
                         <li>
                             <a class="link" href="work.html">Work</a>
@@ -118,68 +104,62 @@
         <div class="absolute inset-0 -z-1 header_bg transition-all"></div>
     </header>
     <!-- Hero bg -->
-    <div heroBg class="absolute inset-0 -z-2">
-        <svg class="max-w-full absolute inset-0 -translate-y-1/2 mx-auto -mt-[10vh]" xmlns="http://www.w3.org/2000/svg"
-            width="1719" height="1719" viewBox="0 0 1719 1719" fill="none">
+    <div heroBg class="absolute inset-0 -z-2 overflow-hidden">
+        <svg class="max-w-full absolute inset-0 -translate-x-1/2 -translate-y-1/2 mx-auto -mt-[10vh]"
+            xmlns="http://www.w3.org/2000/svg" width="1719" height="1719" viewBox="0 0 1719 1719" fill="none">
             <circle cx="859.5" cy="859.5" r="799.5" stroke="#7070FF" stroke-opacity="0.2" stroke-width="120" />
         </svg>
     </div>
     <div class="fixed inset-0 -z-1 backdrop-blur-3xl"></div>
     <main>
         <!-- Hero section -->
-        <section id="hero" class="hero text-center py-spc flex items-center">
+        <section class="min-h-[calc(100vh-105px)] text-center py-spc flex items-center">
             <div class="container relative flex flex-col gap-20 xl:gap-40">
-                <h1 haroEle class="max-w-1045 mx-auto text-120 font-bold text-black">
-                    We Design & Build <i class="text-blue font-semibold">High-Performance</i> Digital Products
+                <h1 haroEle class="text-120 font-bold text-black">
+                    <i class="text-blue font-semibold">Designing</i> Experiences Empowering <i
+                        class="text-blue font-semibold">Brands</i>
                 </h1>
                 <p haroEle class="max-w-816 mx-auto text-black">
-                    Transforming ideas into powerful digital experiences. We craft innovative solutions that drive
-                    business growth and redefine user engagement.
+                    We are a multidisciplinary digital agency focused on building reliable,
+                    user-centered, and scalable solutions that drive measurable business impact
                 </p>
-                <div haroEle class="flex flex-wrap justify-center gap-8 xl:gap-16">
-                    <a href="#" class="btn btn_blue">
-                        <span>Explore our services</span>
-                        <img src="assets/images/arrow-right-icon.svg" alt="">
-                    </a>
-                    <a href="#" class="btn btn_transparent">
-                        <span>Book a Free Consulation</span>
-                        <img src="assets/images/call-icon.svg" alt="">
-                    </a>
-                </div>
             </div>
         </section>
-        <!-- Our Impact section -->
+        <!-- CTA section -->
         <section second_sec class="py-spc text-center">
-            <div class="container">
-                <div class="title" title>
-                    <h2 slideUp>
-                        Our <i>Impact</i>
-                    </h2>
+            <div class="container max-w-xl">
+                <div class="title xl:text-2xl 2xl:text-[28px]">
+                    <div title class="mx-auto max-w-710 mb-28 xl:mb-56">
+                        <h2 slideUp>
+                            We Speak Business, <i>Design</i>, and <i>Technology</i>
+                        </h2>
+                    </div>
+                    <p slideUp>
+                        At HeadBase, we combine strategic thinking, creative execution, and technical excellence to
+                        deliver digital experiences that truly perform. Our work is guided by research, collaboration,
+                        and a deep understanding of user behavior.
+                    </p>
+                    <p>
+                        We don’t just build products we build long-term value.
+                    </p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-30">
-                    <div>
-                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
-                            <span class="counter" data-target="250">0</span>+
-                        </span>
-                        <p>Projects Delivered</p>
-                    </div>
-                    <div>
-                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
-                            <span class="counter" data-target="7">0</span>+
-                        </span>
-                        <p>Years of Excellence</p>
-                    </div>
-                    <div>
-                        <span class="text-96 font-bold text-blue pb-8 xl:pb-16 block transition-all">
-                            <span class="counter" data-target="98">0</span>%
-                        </span>
-                        <p>Client satisfaction</p>
-                    </div>
-                    <div>
-                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
-                            <span class="counter" data-target="120">0</span>+
-                        </span>
-                        <p>Happy Clients</p>
+                <a href="work.html" class="btn btn_blue w-fit mx-auto" slideUp>
+                    <span>Discover our Work</span>
+                    <img src="assets/images/call-icon.svg" alt="" class="brightness-0 invert">
+                </a>
+            </div>
+        </section>
+        <section class="py-40 xl:py-80 text-center">
+            <div class="container max-w-990">
+                <h2 class="font-medium mb-16 xl:mb-32 text-2xl">
+                    Our Vision
+                </h2>
+                <div class="title mb-0">
+                    <div title>
+                        <h2 slideUp class="text-40">
+                            To become a <i>trusted global partner</i> for brands seeking meaningful digital
+                            transformation.
+                        </h2>
                     </div>
                 </div>
             </div>
@@ -357,96 +337,6 @@
                 </div>
             </div>
         </section>
-        <!-- How We Do section -->
-        <section class="py-spc overflow-hidden">
-            <div class="container relative">
-                <div class="title text-center">
-                    <div title>
-                        <h2 slideUp>
-                            How We Create <i>Value</i>
-                        </h2>
-                    </div>
-                    <p slideUp>
-                        A structured approach that turns complex problems into clear, scalable solutions.
-                    </p>
-                </div>
-                <div
-                    class="our_process grid lg:grid-cols-2 xl:grid-cols-1 gap-32 xl:gap-88 xl:place-items-center pt-50">
-                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
-                        <div
-                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
-                            <img class="w-32 sm:w-40" src="assets/images/brain-icon.svg" alt="">
-                        </div>
-                        <div class="flex flex-col sm:gap-8 xl:gap-16">
-                            <h3 class="text-xl lg:text-2xl font-medium text-black">
-                                Understand the Problem
-                            </h3>
-                            <p>
-                                We study the business, users, and constraints to identify the real problem.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
-                        <div
-                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
-                            <img class="w-32 sm:w-40" src="assets/images/idea-icon.svg" alt="">
-                        </div>
-                        <div class="flex flex-col sm:gap-8 xl:gap-16">
-                            <h3 class="text-xl lg:text-2xl font-medium text-black">
-                                Define the Direction
-                            </h3>
-                            <p>
-                                We align goals, priorities, and scope to set a clear product direction.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
-                        <div
-                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
-                            <img class="w-32 sm:w-40" src="assets/images/ui-ux.svg" alt="">
-                        </div>
-                        <div class="flex flex-col sm:gap-8 xl:gap-16">
-                            <h3 class="text-xl lg:text-2xl font-medium text-black">
-                                Design the Experience
-                            </h3>
-                            <p>
-                                We design usable, scalable experiences aligned with strategy.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
-                        <div
-                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
-                            <img class="w-32 sm:w-40" src="assets/images/qa-icon.svg" alt="">
-                        </div>
-                        <div class="flex flex-col sm:gap-8 xl:gap-16">
-                            <h3 class="text-xl lg:text-2xl font-medium text-black">
-                                Build and Quality Assurance (QA)
-                            </h3>
-                            <p>
-                                We build reliable software and check its quality.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="process_card flex gap-14 xl:gap-28 items-start max-w-650" slideUp>
-                        <div
-                            class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white">
-                            <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
-                        </div>
-                        <div class="flex flex-col sm:gap-8 xl:gap-16">
-                            <h3 class="text-xl lg:text-2xl font-medium text-black">
-                                Ship and Grow
-                            </h3>
-                            <p>
-                                Launch, learn, and continuously improve.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="absolute clip-1 bg-brand/5 size-[30vw] inset-0 m-auto -z-2"></div>
-                <div class="absolute inset-0 blur-3xl -z-1"></div>
-            </div>
-        </section>
         <!-- Technologies & Expertise section -->
         <section class="py-spc text-center">
             <div class="container">
@@ -618,420 +508,41 @@
                 </div>
             </div>
         </section>
-        <!-- Industries section -->
-        <section class="py-spc bg-black text-white">
+        <!-- Our Impact section -->
+        <section second_sec class="py-spc text-center">
             <div class="container">
-                <div class="title white">
-                    <div title>
-                        <h2 slideUp>
-                            <i>Industries</i>
-                        </h2>
-                    </div>
-                    <p class="opacity-80" slideUp>
-                        We leverage the latest technologies to build scalable, performant, and future-proof digital
-                        solutions.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="container 3xl:max-w-full 3xl:p-0 mask-[linear-gradient(90deg,#000_80%,transparent_calc(100%-16px))] 3xl:mask-none">
-                <div class="swiper industriesSwiper 3xl:pl-[calc((100%-1680px)/2)]!">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/fintech.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        FinTech
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Building secure, compliant, and high-conversion financial products. From
-                                        dashboards to customer-facing platforms, we design experiences that build trust
-                                        and perform at scale.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/edtech.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        EdTech
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Designing learning platforms that prioritize clarity, engagement, and
-                                        accessibility. Across web, mobile, and LMS products, we create UX that supports
-                                        learning—not distraction.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/healthcare.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        Healthcare
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Building patient-friendly, compliant digital experiences. From healthtech SaaS
-                                        to wellness apps, we balance usability, accessibility, and regulatory
-                                        requirements.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/e-commerce.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        E-commerce
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Creating seamless shopping experiences for DTC brands and enterprise platforms.
-                                        Our work supports discovery, conversion, retention, and end-to-end user
-                                        journeys.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/real-estate.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        Real Estate
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Designing digital platforms that connect people and properties. From listing
-                                        platforms to internal tools, we build intuitive, scalable real estate
-                                        experiences.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide pb-4 pr-4 h-auto!" scaleUp>
-                            <div
-                                class="h-full rounded-xl lg:rounded-3xl p-16 lg:p-28 bg-gray flex flex-col gap-16 xl:gap-32 border border-gray hover:border-border-2">
-                                <div
-                                    class="border border-border-2 p-10 sm:p-12 rounded-lg lg:rounded-2xl w-fit shadow-2 bg-black">
-                                    <img class="w-32 sm:w-40" src="assets/images/mi-tech.svg" alt="">
-                                </div>
-                                <div class="flex flex-col gap-8 xl:gap-16">
-                                    <h3 class="text-xl lg:text-2xl font-medium">
-                                        Manufacturing & Industrial Tech
-                                    </h3>
-                                    <p class="opacity-80">
-                                        Building digital tools for operations, analytics, and internal systems. We focus
-                                        on clarity, efficiency, and usability in complex industrial environments.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Work That Delivers Results section -->
-        <section class="py-spc">
-            <div class="container">
-                <div class="title">
-                    <div title>
-                        <h2 slideUp>
-                            Work That <i>Delivers Results</i>
-                        </h2>
-                    </div>
+                <div class="title" title>
+                    <h2 slideUp>
+                        Results That <br> Define <i>Our Success</i>
+                    </h2>
                     <p slideUp>
-                        Real client challenges, clear solutions, and the impact created through design and technology.
+                        Our success is measured by client satisfaction, long-term partnerships, and real-world impact.
                     </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-40 xl:gap-y-80">
-                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
-                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
-                            <img src="assets/images/project1.webp" alt=""
-                                class="absolute size-full inset-0 object-cover">
-                            <div
-                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
-                            </div>
-                        </div>
-                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
-                            <div class="badge green">
-                                Website Design
-                            </div>
-                            <div class="badge blue">
-                                E-Commerce
-                            </div>
-                            <div class="badge yellow">
-                                Skincare
-                            </div>
-                        </div>
-                        <h3 class="text-xl xl:text-2xl text-black">
-                            Ellitee SkinCare
-                        </h3>
-                        <p>
-                            A science-led skincare website focused on trust, education, and elegant product
-                            storytelling.
-                        </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-30">
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="250">0</span>+
+                        </span>
+                        <p>Projects Delivered</p>
                     </div>
-                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
-                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
-                            <img src="assets/images/project2.webp" alt=""
-                                class="absolute size-full inset-0 object-cover">
-                            <div
-                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
-                            </div>
-                        </div>
-                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
-                            <div class="badge purple">
-                                Fashion
-                            </div>
-                            <div class="badge green">
-                                Web Development
-                            </div>
-                            <div class="badge blue">
-                                E-Commerce
-                            </div>
-                        </div>
-                        <h3 class="text-xl xl:text-2xl text-black">
-                            Underpinnings Lingerie
-                        </h3>
-                        <p>
-                            An inclusive, body-positive eCommerce platform designed for confidence and perfect fit
-                            discovery.
-                        </p>
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="7">0</span>+
+                        </span>
+                        <p>Years of Excellence</p>
                     </div>
-                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
-                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
-                            <img src="assets/images/project3.webp" alt=""
-                                class="absolute size-full inset-0 object-cover">
-                            <div
-                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
-                            </div>
-                        </div>
-                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
-                            <div class="badge blue">
-                                Liquor
-                            </div>
-                            <div class="badge yellow">
-                                Shopify Store
-                            </div>
-                            <div class="badge red">
-                                Luxury E-Commerce
-                            </div>
-                        </div>
-                        <h3 class="text-xl xl:text-2xl text-black">
-                            Snowo Distillers
-                        </h3>
-                        <p>
-                            A luxury Shopify store crafted to showcase heritage, awards, and premium brand identity.
-                        </p>
+                    <div>
+                        <span class="text-96 font-bold text-blue pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="98">0</span>%
+                        </span>
+                        <p>Client satisfaction</p>
                     </div>
-                    <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
-                        <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
-                            <img src="assets/images/project4.webp" alt=""
-                                class="absolute size-full inset-0 object-cover">
-                            <div
-                                class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
-                            </div>
-                        </div>
-                        <div class="flex gap-8 mb-6 xl:mb-12 flex-wrap">
-                            <div class="badge green">
-                                Street Art
-                            </div>
-                            <div class="badge blue">
-                                E-Commerce
-                            </div>
-                            <div class="badge yellow">
-                                Web Development
-                            </div>
-                        </div>
-                        <h3 class="text-xl xl:text-2xl text-black">
-                            Frank Art Color
-                        </h3>
-                        <p>
-                            A bold, immersive portfolio website for showcasing street art and creative services.
-                        </p>
-                    </div>
-                </div>
-                <button class="btn btn_blue mx-auto mt-40 xl:mt-80">
-                    <span>View More Projects</span>
-                    <img src="assets/images/arrow-right-icon.svg" alt="">
-                </button>
-            </div>
-        </section>
-        <!-- Who We Work With section -->
-        <section class="py-spc text-center">
-            <div class="container">
-                <div class="title">
-                    <div title>
-                        <h2 slideUp>
-                            Who We <i>Work With</i>
-                        </h2>
-                    </div>
-                    <p slideUp>
-                        Teams and organizations we partner with to design, build, and scale digital products.
-                    </p>
-                </div>
-                <div class="team_wrap">
-                    <div class="team_cards grid md:grid-cols-2 2xl:grid-cols-3">
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/founder.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Founders & Leadership Teams
-                            </h3>
-                            <p>
-                                Building and scaling products while balancing speed, risk, and long-term vision.
-                            </p>
-                        </div>
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/team.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Product & Engineering Teams
-                            </h3>
-                            <p>
-                                Design and development partners for complex systems, workflows, and platforms.
-                            </p>
-                        </div>
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/chart-icon.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Startups & Growing Businesses
-                            </h3>
-                            <p>
-                                Turning early ideas into scalable products that support rapid growth.
-                            </p>
-                        </div>
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/organizations.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Enterprises & Large Organizations
-                            </h3>
-                            <p>
-                                Modernizing systems and building reliable internal and customer-facing tools.
-                            </p>
-                        </div>
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/secure.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Regulated & Complex Industries
-                            </h3>
-                            <p>
-                                Delivering compliant, secure solutions in highly regulated environments.
-                            </p>
-                        </div>
-                        <div fadeIn class="team_card p-19 lg:p-32 3xl:p-64 flex flex-col gap-8 xl:gap-16 items-center">
-                            <div
-                                class="shrink-0 border border-border p-10 sm:p-12 rounded-lg sm:rounded-2xl w-fit shadow-1 bg-white mb-6 xl:mb-12">
-                                <img class="w-32 sm:w-40" src="assets/images/earth.svg" alt="">
-                            </div>
-                            <h3 class="sm:text-xl 3xl:text-2xl font-medium text-black">
-                                Global & Distributed Clients
-                            </h3>
-                            <p>
-                                Supporting teams across regions with reliable collaboration and delivery.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card_effect absolute bg-brand/10 -z-1"></div>
-                </div>
-            </div>
-        </section>
-        <!-- Our mission section -->
-        <section class="py-spc">
-            <div class="container">
-                <div class="title max-w-1550">
-                    <div title>
-                        <h2 slideUp>
-                            Whether you’re a startup, an <i>Established business</i>, or <i>an Enterprise</i>, we’re
-                            here to help you reach new heights online.
-                        </h2>
-                    </div>
-                </div>
-                <div class="grid xl:grid-cols-2 gap-32 2xl:gap-64 items-center">
-                    <div class="relative rounded-xl overflow-hidden aspect-video xl:aspect-[1.3/1] group">
-                        <img src="assets/images/team.webp" alt="" class="size-full object-cover">
-                        <div
-                            class="glass_effect absolute h-25 scale-200 w-full top-1/2 -translate-y-1/2 -left-full rotate-45 duration-500 bg-white/30 group-hover:left-full!">
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-32 2xl:gap-64">
-                        <div class="grid md:grid-cols-2 xl:grid-cols-1 gap-32">
-                            <div class="flex flex-col gap-8 xl:gap-16">
-                                <div title>
-                                    <h3 class="text-40 font-semibold text-black" slideUp>
-                                        Our Mission
-                                    </h3>
-                                </div>
-                                <p slideUp>
-                                    To empower businesses with cutting-edge web solutions that enhance their digital
-                                    presence and drive growth.
-                                </p>
-                            </div>
-                            <div class="flex flex-col gap-8 xl:gap-16">
-                                <div title>
-                                    <h3 class="text-40 font-semibold text-black" slideUp>
-                                        Our Approach
-                                    </h3>
-                                </div>
-                                <p slideUp>
-                                    That’s why we take a collaborative approach, working closely with our clients to
-                                    deliver tailored solutions that align with their goals.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="grid grid-cols-2 gap-32">
-                            <div class="flex flex-col gap-8 xl:gap-16">
-                                <span class="text-96 font-bold text-black"><span class="counter"
-                                        data-target="164">0</span>+</span>
-                                <p>Successful Projects Delivered</p>
-                            </div>
-                            <div class="flex flex-col gap-8 xl:gap-16">
-                                <span class="text-96 font-bold text-blue"><span class="counter"
-                                        data-target="98">0</span>%</span>
-                                <p>Client Satisfaction Rate</p>
-                            </div>
-                        </div>
+                    <div>
+                        <span class="text-96 font-bold text-black pb-8 xl:pb-16 block transition-all">
+                            <span class="counter" data-target="120">0</span>+
+                        </span>
+                        <p>Happy Clients</p>
                     </div>
                 </div>
             </div>
@@ -1254,8 +765,8 @@
         <div class="absolute inset-0 blur-3xl -z-1"></div>
     </footer>
     <!-- Back to top -->
-    <button id="backToTop" class="fixed opacity-0 bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all 
-    duration-500 hover:text-blue hover:bottom-50">
+    <button id="backToTop"
+        class="fixed opacity-0 bottom-40 right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-20 rounded-2xl text-black hover:border-blue transition-all duration-500 hover:text-blue hover:bottom-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m5 12 7-7 7 7" />
