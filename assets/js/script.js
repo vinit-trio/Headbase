@@ -313,9 +313,6 @@ function animateCursor(cursorEl) {
 }
 
 
-// ------------------------------------------------
-// SlideUp animation
-// ------------------------------------------------
 gsap.utils.toArray("[slideUp]").forEach((slideUp) => {
     gsap.to(slideUp, {
         y: 0,
@@ -329,7 +326,6 @@ gsap.utils.toArray("[slideUp]").forEach((slideUp) => {
         }
     });
 });
-
 
 // ------------------------------------------------
 // fadeIn animation
