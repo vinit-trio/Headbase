@@ -49,7 +49,7 @@
                 d="M21.1868 12.8532L16.8428 14.3189C15.6435 14.7187 14.6841 15.6515 14.2844 16.8774L12.8186 21.2214C11.566 24.9791 6.28925 24.8991 5.11664 21.1414L0.186332 5.28449C-0.77308 2.13975 2.1318 -0.791784 5.24989 0.194278L21.1335 5.12459C24.8645 6.2972 24.9178 11.6006 21.1868 12.8532Z"
                 fill="#00C951" />
         </svg>
-        <div class="bg-green-500 mx-25 rounded-md py-9 px-18 text-white">
+        <div class="bg-green-500 mx-25 rounded-md py-9 px-18 text-black">
             You
         </div>
     </div>
@@ -769,7 +769,7 @@
                 </div>
                 <div class="grid md:grid-cols-2 gap-x-24 xl:gap-x-48 gap-y-40 xl:gap-y-80">
                     <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
+                        <a href="work-details.html" class="absolute inset-0 z-1"><span class="sr-only">Prject Details</span></a>
                         <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8 group">
                             <img src="assets/images/project1.webp" alt=""
                                 class="absolute size-full inset-0 object-cover">
@@ -797,7 +797,7 @@
                         </p>
                     </div>
                     <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
+                        <a href="work-details.html" class="absolute inset-0 z-1"><span class="sr-only">Prject Details</span></a>
                         <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
                             <img src="assets/images/project2.webp" alt=""
                                 class="absolute size-full inset-0 object-cover">
@@ -825,7 +825,7 @@
                         </p>
                     </div>
                     <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
+                        <a href="work-details.html" class="absolute inset-0 z-1"><span class="sr-only">Prject Details</span></a>
                         <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
                             <img src="assets/images/project3.webp" alt=""
                                 class="absolute size-full inset-0 object-cover">
@@ -852,7 +852,7 @@
                         </p>
                     </div>
                     <div class="group relative flex flex-col gap-8 3xl:gap-16">
-                        <a href="work-details.html" class="absolute inset-0 z-1"></a>
+                        <a href="work-details.html" class="absolute inset-0 z-1"><span class="sr-only">Prject Details</span></a>
                         <div class="image relative rounded-xl overflow-hidden aspect-[1.63/1] mb-4 xl:mb-8">
                             <img src="assets/images/project4.webp" alt=""
                                 class="absolute size-full inset-0 object-cover">
@@ -1187,9 +1187,9 @@
     </main>
     <!-- Footer -->
     <footer class="relative py-spc border-t border-black/10 overflow-hidden">
-        <div slideUp class="container">
+        <div class="container">
             <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-32 gap-y-40 sm:gap-y-80">
-                <div>
+                <div slideUp>
                     <div class="mb-32 xl:mb-64">
                         <img src="assets/images/logo.svg" alt="HeadBase" class="w-275">
                     </div>
@@ -1201,7 +1201,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 sm:not-xl:order-last">
+                <div slideUp class="flex flex-col gap-25 md:gap-35 3xl:gap-100 sm:not-xl:order-last">
                     <div class="link_title font-medium text-2xl text-black">
                         Quick links
                     </div>
@@ -1213,7 +1213,7 @@
                         <li><a class="link hover:text-black" href="#">Career</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-100 sm:not-xl:order-last">
+                <div slideUp class="flex flex-col gap-25 md:gap-35 3xl:gap-100 sm:not-xl:order-last">
                     <div class="link_title font-medium text-2xl text-black">
                         Services
                     </div>
@@ -1226,20 +1226,20 @@
                         <li><a class="link hover:text-black" href="#">App Design</a></li>
                     </ul>
                 </div>
-                <div class="flex flex-col gap-25 md:gap-35 3xl:gap-74">
+                <div slideUp class="flex flex-col gap-25 md:gap-35 3xl:gap-74">
                     <p>
                         SH-403 Shiven Shoppers, Adajan DN,
                         Surat – 395009, Gujarat, India
                     </p>
                     <ul class="flex gap-8 xl:gap-16">
                         <li>
-                            <a href="#"
+                            <a href="#" aria-label="Instagram account"
                                 class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
                                 <img src="assets/images/Instagram.svg" alt="">
                             </a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="#" aria-label="Linkedin account"
                                 class="border border-border inline-block p-10 sm:p-12 rounded-lg xl:rounded-2xl hover:shadow-1">
                                 <img src="assets/images/LinkedIn.svg" alt="">
                             </a>
@@ -1254,7 +1254,7 @@
         <div class="absolute inset-0 blur-3xl -z-1"></div>
     </footer>
     <!-- Back to top -->
-    <button id="backToTop"
+    <button aria-label="Back to top button" id="backToTop"
         class="fixed opacity-0 bottom-20 lg:bottom-40 right-20 lg:right-40 z-100 backdrop-blur-3xl bg-white/80 border border-border p-10 lg:p-20 
     rounded-lg lg:rounded-2xl text-black hover:border-blue transition-all duration-500 hover:text-blue hover:bottom-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -1264,10 +1264,7 @@
         </svg>
     </button>
     <!-- Scripts -->
-    <script src="assets/js/lenis.js"></script>
-    <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/ScrollTrigger.js"></script>
-    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/all.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 

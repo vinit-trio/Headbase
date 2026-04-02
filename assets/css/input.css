@@ -94,11 +94,11 @@
     }
 
     .btn_blue {
-        @apply text-white bg-brand transition-all hover:bg-blue
+        @apply text-white bg-blue transition-all hover:opacity-95
     }
 
     .btn_transparent {
-        @apply bg-transparent text-brand transition-all hover:text-blue
+        @apply bg-transparent text-blue transition-all hover:opacity-95
     }
 
     .title {
@@ -146,7 +146,7 @@
     }
 
     .cursor-label {
-        @apply mx-25 rounded-md py-9 px-18 text-white transition-opacity z-20
+        @apply mx-25 rounded-md py-9 px-18 text-black transition-opacity z-20
     }
 
     .cursor {
