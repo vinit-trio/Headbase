@@ -428,23 +428,6 @@ gsap.utils.toArray("[slideLeft]").forEach((card) => {
 
 
 // ------------------------------------------------
-// fadeIn animation
-// ------------------------------------------------
-
-gsap.from('[menu] li', {
-    y: 50,
-    opacity: 0,
-    ease: "power4.out",
-    stagger: .1,
-    scrollTrigger: {
-        trigger: '[menu]',
-        start: "top 70%",
-        end: "top 30%",
-    }
-});
-
-
-// ------------------------------------------------
 // Testimonial swiper
 // ------------------------------------------------
 
@@ -616,16 +599,4 @@ if (fileInput) {
             uploadText.textContent = this.files[0].name;
         }
     });
-}
-
-
-// ------------------------------------------------
-// Load swiper
-// ------------------------------------------------
-
-if (document.querySelector('.swiper')) {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '/css/swiper.css';
-    document.head.appendChild(link);
 }
